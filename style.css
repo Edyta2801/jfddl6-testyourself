@@ -1,4 +1,11 @@
 /* navbar */
+.section-nav-top__flex-wrapper {
+    display: flex;
+}
+
+.section-nav-top__flex-wrapper a {
+    text-decoration: none;
+}
 
 /* hero */
 
