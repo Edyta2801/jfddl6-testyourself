@@ -1,11 +1,79 @@
 /* navbar */
 .section-nav-top__flex-wrapper {
-    display: flex;
+    width: 100%;
+    height: 40px;
+    background-color: #74b9ff;
 }
+
+.section-nav-top__flex-wrapper ul {
+    display: flex;
+    justify-content: center;
+    /* align-content: center; */
+    /* align-items: center; */
+    list-style-type: none;
+    padding: 0;
+}
+
+.section-nav-top__flex-wrapper li {
+    flex-grow: 1;
+}
+
 
 .section-nav-top__flex-wrapper a {
     text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+
 }
+
+.section-nav-top__flex-wrapper a:hover {
+	text-decoration: none;
+    background-color: #0984e3;
+
+}
+
+/* .sticky
+{
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+} */
+
+/* var NavY = $('.nav').offset().top;
+
+var stickyNav = function()
+{
+	var ScrollY = $(window).scrollTop();
+
+	if (ScrollY > NavY)
+	{
+		$('.nav').addClass('sticky');
+	}
+	else
+	{
+		$('.nav').removeClass('sticky');
+	}
+};
+
+$(document).ready
+(
+	function()
+	{
+		stickyNav();
+	}
+);
+
+$(window).scroll
+(
+	function()
+	{
+		stickyNav();
+	}
+); */
 
 /* hero */
 
