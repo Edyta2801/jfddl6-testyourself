@@ -9,7 +9,6 @@
     font-weight: bold;
     color: #2d3436;
     font-size: 18px;
-    
 }
 .section__hero__container__picture{
     width: 100%;
@@ -20,39 +19,39 @@
 
 .section__hero__description__main{
     position: absolute;
-    left: 30%;
-    top: 25%;
-    font-size: 24px;
-    
+    left: 200px;
+    top: 230px;
+    font-size: 30px;
 }
 .section__hero__description__main2{
     position: absolute;
-    top: 50%;
-    left: 30%;
-    font-size-adjust: inherit;
-     
+    left: 320px;
+    top: 270px;
+    font-size: 24px;
 }
 .section__hero__description__features{
     position: absolute;
-    top: 65%;
-    left: 55%;
+    left: 320px;
+    top: 330px;
     font-size: 24px;
 }
 .section__hero__description__logo{
     font-size: 30px;
 }
 .section__hero__form{
+    position: absolute;
     border: 1px solid #2d3436;
     border-radius: 6px;
     background-image: linear-gradient(#fdcb6e,#81ecec);
-    color: #2d3436; 
+    color: #2d3436;
     font-weight: bold;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
     font-size: 20px;
     position: relative;
-    left: 70%;
+    left: 120px;
+    bottom: 40px;
 
 }
 .section__hero__form:hover{
