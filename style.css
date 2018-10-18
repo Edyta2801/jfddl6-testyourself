@@ -26,13 +26,13 @@ body {
 	background-color: #1a95f4;
 }
 
-.section-nav-top__flex-wrapper .section-nav-top__flex-wrapper__menu-item {
+.section-nav-top__flex-wrapper__menu-item {
 	flex-grow: 1;
 	background-color: #74b9ff;
 }
 
 
-.section-nav-top__flex-wrapper .section-nav-top__flex-wrapper__menu-item__link {
+.section-nav-top__flex-wrapper__menu-item__link {
     text-decoration: none;
     text-align: center;
     display: block;
@@ -42,7 +42,7 @@ body {
 
 }
 
-.section-nav-top__flex-wrapper .section-nav-top__flex-wrapper__menu-item__link:hover {
+.section-nav-top__flex-wrapper__menu-item__link:hover {
     background-color: #0984e3;
 
 }
@@ -56,7 +56,7 @@ body {
 	color: darkblue;
 }
 
-.section-nav-top__flex-wrapper  .section-nav-top__flex-wrapper__menu-item__link:visited {
+.section-nav-top__flex-wrapper__menu-item__link:visited {
 	background-color: #0984e3;
 	color: white;
 
