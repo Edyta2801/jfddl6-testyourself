@@ -5,44 +5,45 @@
 /* product info */
 
 /* product info */
+
 .section-info-product__item{
     display:flex;
     align-items:center;
     justify-content:center;
-   
+ 
     height:300px;
     color:#fff;
     border: 1px solid #fff;
     background-color:#636e72;
 }
-
-
+ 
 .section-info-product{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "item-photo item-content";
 }
-
+ 
 .section-info-product--reversed{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "item-content item-photo";
 }
-
+ 
 .section-info-product__item-photo{
     grid-area: item-photo;
-    /*background-image: url*/
-    /*background-size:cover;*/
+    background-image:url('https://as1.ftcdn.net/jpg/00/34/65/50/500_F_34655037_ansWopjy9ZSZ8FxpAoDJ8oZH2c4u5fDW.jpg');
+    background-size:cover;
 }
-
+ 
 .section-info-product__item-content{
     grid-area: item-content;
     background-color: #6c5ce7;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    font: size 20;
+    font-size: 20px;
+    border:50px;
 }
-
+ 
 @media screen and (max-width:575.98px){
     .section-info-product{
         display: grid;
@@ -50,9 +51,9 @@
         grid-template-areas: " item-content " " item-photo ";
     }
     .section-info-product--reversed{
-        grid-template-areas: " item-content"  " item-photo ";
+        grid-template-areas: " item-content" " item-photo ";
     }
-
+ 
 }
-
+ 
 /* team info */
