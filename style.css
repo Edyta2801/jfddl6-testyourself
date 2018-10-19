@@ -5,3 +5,69 @@
 /* product info */
 
 /* team info */
+h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.wrapper{
+    width: 100%;
+    max-width: 960px;
+    margin:0 auto;
+}
+.section-team__container{
+    //background: red;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: nowrap;
+    width: 100%;
+    flex-basis: auto;
+}
+.section-team__container--elements{
+    display: flex;
+    flex-direction: column;
+}
+.section-team__container--elements p{
+    display: flex;
+    justify-content: center;
+}
+.section-team__container--elements a{
+    display: flex;
+    justify-content: center;
+}
+.section-team__container---image{
+    display: flex;
+    justify-content: space-around;
+}
+.fb{
+    background: url(/photos/fb.png) no-repeat center;
+    background-size: 80%;
+}
+@media only screen and (max-width:767px){
+    .section-team__container{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: 50%;
+    }
+     .section-team__container--elements {
+        
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+        
+        
+    }
+     .section-features__container--elements p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+        
+    }
+    .fb{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
