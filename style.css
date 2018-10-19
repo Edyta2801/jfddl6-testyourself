@@ -23,7 +23,7 @@ body {
 
 .section-nav-top__flex-wrapper__logo {
 	flex-grow: 1;
-	background-color: #1a95f4;
+	background-color: #6c5ce7;
 }
 
 .section-nav-top__flex-wrapper__menu-item {
@@ -38,7 +38,7 @@ body {
     display: block;
     font-size: 18px;
 	padding: 10px;
-	color: white;
+	color:#2d3436;
 
 }
 
@@ -53,12 +53,12 @@ body {
     display: block;
     font-size: 18px;
 	padding: 10px;
-	color: darkblue;
+	color: #2d3436;
 }
 
 .section-nav-top__flex-wrapper__menu-item__link:visited {
 	background-color: #0984e3;
-	color: white;
+	color: #2d3436;
 
 }
 
