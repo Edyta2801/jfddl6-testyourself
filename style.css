@@ -1,8 +1,60 @@
-/* navbar */
-body, html {
-	margin: 0px;
-	padding: 0px;
+
+body, html{
+    margin:0;
+    padding:0;
 }
+
+.section__hero__container{
+    display:flex;
+    width:100%;
+    height:100vh;
+    background-image:url(images/hero2.jpg);
+    background-size:100% 100%;
+    justify-content: center;
+    align-items: center;
+}
+.section__hero__container__box{
+    padding:10px;
+    color:#2d3436;
+    text-align: center;
+    font-family:  'Lucida Sans';
+    font-weight: bold;
+    text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px;
+}
+.section__hero__container__box__text-1{
+    padding:10px;
+    font-size: 34px;
+    text-transform: uppercase;
+}
+.section__hero__box__features-desc{
+    padding:10px;
+    font-size: 20px;
+    text-align:top;
+}
+.section__hero__box__sign-in{
+    font-size:25px;
+    color:#2d3436;
+    padding:10px;
+    text-decoration: none;
+    background-image: linear-gradient(#ff7675,#e9a3a3);
+    border:1px solid #2d3436;
+    border-radius: 6px;
+    -webkit-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
+}
+.section__hero__box__sign-in:hover{
+    background-image: linear-gradient(#e9a3a3,#ff7675);
+    color: #636e72;
+}
+
+
+
+
+
+
+/* navbar */
+
 
 .section-nav-top{
 	position: fixed;
@@ -66,13 +118,17 @@ body, html {
 @media only screen and (max-width: 576px) {
 	.section-nav-top__flex-wrapper {
 		flex-direction: column;
-	}
+    }
+    
+    .section__hero {
+        margin-top: 310px;
+    }
 }
 
 
 /* hero */
 .section__hero {
-	margin-top: 55px;
+	margin-top: 20px;
 }
 
 /* product info */
