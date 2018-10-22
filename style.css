@@ -3,6 +3,30 @@ body, html{
     margin:0;
     padding:0;
 }
+/*  logo section  */
+
+
+.section-nav-top__flex-wrapper__logo{
+    /* background-color :#303952; */
+    height:auto;
+    width:auto;
+    background-image:url(images/#testYourself_#13_brand_usage_#1_created_by_logaster.png);
+    background-size:100% 100%;
+}
+.section-nav-top__flex-wrapper__logo__link{
+
+
+}
+
+
+/*logo  section ---end*/
+
+
+
+
+
+
+
 
 .section__hero__container{
     display:flex;
@@ -76,12 +100,12 @@ body, html{
 
 .section-nav-top__flex-wrapper__logo {
 	flex-grow: 1;
-	background-color: #6c5ce7;
+	/* background-color: #6c5ce7; */
 }
 
 .section-nav-top__flex-wrapper__menu-item {
 	flex-grow: 1;
-	background-color: #74b9ff;
+	background-color: #596275;
 }
 
 
