@@ -11,7 +11,7 @@ body, html{
     display:flex;
 	width:100%;
 	height: 100vh;
-    background-image:url(images/hero2.jpg);
+    background-image:url(images/1185.jpg);
     background-size:100% 100%;
     justify-content: center;
     align-items: center;
@@ -22,7 +22,7 @@ body, html{
     text-align: center;
     /* font-family:  Merriweather; */
     font-weight: bold;
-    text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px;
+    /* text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px; */
 }
 .section__hero__container__box__text-1{
     padding:10px;
@@ -154,7 +154,7 @@ body, html{
     .section-nav-top__flex-wrapper__logo {
         flex-grow: 1;
         width:auto;
-        max-height:195px;
+        max-height:185px;
        
     
       
