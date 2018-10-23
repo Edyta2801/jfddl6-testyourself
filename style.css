@@ -92,11 +92,6 @@ body, html{
     transition: max-height 0.5s ease-in-out;
 }
 
-/* .section-nav-top__flex-wrapper__logo {
-	flex-grow: 1;
-	background-color: #6c5ce7;
-} */
-
 .section-nav-top__flex-wrapper__menu-item {
 	flex-grow: 1;
 	background-color: #74b9ff;
@@ -126,15 +121,6 @@ body, html{
     background-color: #0984e3;
 
 }
-
-/* .section-nav-top__flex-wrapper__logo__link {
-	text-decoration: none;
-    text-align: center;
-    display: block;
-    font-size: 18px;
-	padding: 10px;
-	color: #2d3436;
-} */
 
 .section-nav-top__flex-wrapper__menu-item__link:visited {
 	background-color: #0984e3;
