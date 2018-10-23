@@ -67,17 +67,11 @@ body, html{
     flex-wrap: nowrap;
 }
 
-.nav-top__toggle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-	background-color: #9E9E9E;
-
+.section-nav-top__toggle {
 	display: none;
 }
 
-.nav-top__toggle__button {
+.section-nav-top__toggle__button {
     width: 35px;
     height: 5px;
     background-color: black;
@@ -85,14 +79,17 @@ body, html{
 }
 
 .section-nav-top__flex-wrapper {
-    width: 100%;
 
+    flex-grow: 5;
     display: flex;
     justify-content: center;
     list-style-type: none;
 
 	padding: 0;
-	margin: 0;
+    margin: 0;
+
+    overflow-x: hidden;
+    transition: max-height 0.5s ease-in-out;
 }
 
 /* .section-nav-top__flex-wrapper__logo {
@@ -106,14 +103,23 @@ body, html{
 }
 
 
-.section-nav-top__flex-wrapper__menu-item__link, .section-nav-top__logo__link, .nav-top__toggle__link  {
+.section-nav-top__flex-wrapper__menu-item__link, .section-nav-top__logo__link  {
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    height: 25px;
+    color:#2d3436;
+}
+
+.section-nav-top__toggle__link {
     text-decoration: none;
     text-align: center;
     display: block;
     font-size: 18px;
 	padding: 10px;
-	color:#2d3436;
-
+    color:#2d3436;
 }
 
 .section-nav-top__flex-wrapper__menu-item__link:hover {
@@ -121,14 +127,14 @@ body, html{
 
 }
 
-.section-nav-top__flex-wrapper__logo__link {
+/* .section-nav-top__flex-wrapper__logo__link {
 	text-decoration: none;
     text-align: center;
     display: block;
     font-size: 18px;
 	padding: 10px;
 	color: #2d3436;
-}
+} */
 
 .section-nav-top__flex-wrapper__menu-item__link:visited {
 	background-color: #0984e3;
@@ -149,11 +155,15 @@ body, html{
 		flex-direction: column;
 	}
 
-	.nav-top__toggle {
-		display: flex;
+	.section-nav-top__toggle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        background-color: #9E9E9E;
 	}
 
-    .nav-top__flex-wrapper--collapsed {
+    .section-nav-top__flex-wrapper--collapsed {
         max-height: 0 !important;
     }
 
