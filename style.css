@@ -5,81 +5,52 @@
 /* product info */
 
 /* team info */
-h2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.wrapper{
+.section-team{
+    background: blue;
     width: 100%;
-    max-width: 960px;
-    margin:0 auto;
-}
-.section-team__container{
-    //background: red;
-    display: flex;
-    justify-content:space-around;
-    flex-wrap: nowrap;
-    width: 100%;
-    flex-basis: auto;
-}
-.section-team__container--elements{
-    display: flex;
-    flex-direction: column;
-}
-.section-team__container--elements p{
-    display: flex;
-    justify-content: center;
-}
-.section-team__container--elements a{
-    display: flex;
-    justify-content: center;
-}
-.section-team__container--image{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-around;
-}
-.section-team__img{
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    transform: translateY(-20%);
 }
 
-.fb{
-    background: url(/photos/fb.png) no-repeat center;
+.section-team__header{
+    text-align: center;
+}
+
+.section-team__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:space-around;
+    flex-basis: 25%;
+}
+
+.section-team__img{
+    border-radius: 50%;
+}
+
+.section-team__fb-link{
+    background:blue, url(/photos/fb.png) no-repeat center;
     background-size: 80%;
 }
+
 @media only screen and (max-width:767px){
     .section-team__container{
-        
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         flex-basis: 50%;
     }
      .section-team__container--elements {
-        
         flex-direction: row;
         justify-content: center;
         align-content: space-between;
-        
-        
     }
      .section-features__container--elements p{
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #000000;
-        
     }
     .fb{
         display: flex;
         justify-content:center;
         align-items: center;
     }
+}
