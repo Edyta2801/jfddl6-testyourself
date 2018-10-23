@@ -1,7 +1,8 @@
 
 body, html{
     margin:0;
-    padding:0;
+	padding:0;
+	overflow-x: hidden;
 }
 
 .section__hero__container{
@@ -49,18 +50,38 @@ body, html{
 }
 
 
-
-
-
-
 /* navbar */
-
-
 .section-nav-top{
 	position: fixed;
+	display: flex;
+
 	left: 0;
 	top: 0;
 	width: 100%;
+}
+
+.section-nav-top__logo {
+	flex-grow: 1;
+    background-color: #9E9E9E;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.nav-top__toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+	background-color: #9E9E9E;
+
+	display: none;
+}
+
+.nav-top__toggle__button {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
 }
 
 .section-nav-top__flex-wrapper {
@@ -74,10 +95,10 @@ body, html{
 	margin: 0;
 }
 
-.section-nav-top__flex-wrapper__logo {
+/* .section-nav-top__flex-wrapper__logo {
 	flex-grow: 1;
 	background-color: #6c5ce7;
-}
+} */
 
 .section-nav-top__flex-wrapper__menu-item {
 	flex-grow: 1;
@@ -85,7 +106,7 @@ body, html{
 }
 
 
-.section-nav-top__flex-wrapper__menu-item__link {
+.section-nav-top__flex-wrapper__menu-item__link, .section-nav-top__logo__link, .nav-top__toggle__link  {
     text-decoration: none;
     text-align: center;
     display: block;
@@ -119,10 +140,23 @@ body, html{
 	.section-nav-top__flex-wrapper {
 		flex-direction: column;
     }
-    
+
     .section__hero {
         margin-top: 310px;
+	}
+
+	.section-nav-top {
+		flex-direction: column;
+	}
+
+	.nav-top__toggle {
+		display: flex;
+	}
+
+    .nav-top__flex-wrapper--collapsed {
+        max-height: 0 !important;
     }
+
 }
 
 
