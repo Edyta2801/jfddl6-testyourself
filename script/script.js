@@ -4,7 +4,7 @@ const menuListItems = document.querySelectorAll('.section-nav-top__flex-wrapper_
 
 const menuListHeight = menuListItems[0].clientHeight * menuListItems.length;
 
-// menuList.classList.add('section-nav-top__flex-wrapper--collapsed');
+menuList.classList.add('section-nav-top__flex-wrapper--collapsed');
 
 menuToggle.addEventListener(
     'click',
@@ -14,11 +14,8 @@ menuToggle.addEventListener(
         if(menuList.classList.contains('section-nav-top__flex-wrapper--collapsed')){
             menuList.classList.remove('section-nav-top__flex-wrapper--collapsed');
             menuList.style.maxHeight = menuListHeight + 'px';
-            console.log(menuListHeight);
-            console.log('remove');
         }else{
             menuList.classList.add('section-nav-top__flex-wrapper--collapsed');
-            console.log('add');
         }
 
 
