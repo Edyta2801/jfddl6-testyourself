@@ -167,6 +167,7 @@ body, html{
 }
 
 
+
 /* hero */
 .section__hero {
 	margin-top: 20px;
@@ -174,6 +175,61 @@ body, html{
 
 /* product info */
 
+/* product info */
+
+
+.section-info-product__item{
+   display:flex;
+   align-items:center;
+   justify-content:center;
+   height:300px;
+   color:#fff;
+   border: 1px solid #fff;
+   background-color:#636e72;
+}
+
+.section-info-product{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: "item-photo item-content";
+}
+
+.section-info-product--reversed{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-template-areas: "item-content item-photo";
+}
+
+.section-info-product__item-photo{
+   grid-area: item-photo;
+   background-size:cover;
+   width:100%;
+}
+
+.section-info-product__item-content{
+   grid-area: item-content;
+   background-color:#2d3436;
+   text-align: center;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 15px;
+   line-height: 35px;
+   width:100%;
+}
+
+@media screen and (max-width:575.98px){
+   .section-info-product{
+       display: grid;
+       grid-template-columns: repeat(1, 1fr);
+       grid-template-areas: " item-content " " item-photo ";
+       background-size:contain;
+   }
+   .section-info-product--reversed{
+       grid-template-areas: " item-content" " item-photo ";
+   }
+
+}
+
+/* team info */
 /* team info */
 
 /* premiere registration */
