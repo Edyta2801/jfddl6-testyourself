@@ -163,17 +163,12 @@ body, html{
 
 }
 
-
-
 /* hero */
 .section__hero {
 	margin-top: 20px;
 }
 
 /* product info */
-
-/* product info */
-
 
 .section-info-product__item{
    display:flex;
@@ -227,6 +222,66 @@ body, html{
 }
 
 /* team info */
+.section-team{
+    background: orange;
+    width: 100%;
+}
+
+.section-team__header{
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: purple;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.section-team__container{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content:space-around;
+    flex-basis: 25%;
+    text-align: center;
+    font-size: 30px;
+    line-break: auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.section-team__img{
+    border-radius: 50%;
+    range: auto;
+}
+
+.section-team__fb-link{
+    background: url(/photos/fb.png) no-repeat center;
+    background-size: 80%;
+    text-decoration-line: none;
+}
+
+@media only screen and (max-width:767px){
+    .section-team__container{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 50%;
+    }
+     .section-team__container--elements {
+        flex-direction: row;
+        justify-content: center;
+        align-content: space-between;
+    }
+     .section-features__container--elements p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000;
+    }
+    .fb{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
 /* team info */
 
 /* premiere registration */
@@ -280,4 +335,3 @@ body, html{
 	-moz-box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
 	box-shadow: 0px 0px 15px 5px rgba(204,204,204,0.9);
 }
-
