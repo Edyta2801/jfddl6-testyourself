@@ -3,27 +3,38 @@ body, html{
 	padding:0;
     overflow-x: hidden;
     font-family: sans-serif;
+    background-color:#ced6e0;
    
 }
 
 .section__hero__container{
+    margin-top:40px;
     display:flex;
-	width:100%;
-	height: 100vh;
-    background-image:url(images/1185.jpg);
-    background-size:100% 100%;
+	width:130vh;
+    height: auto;
+    min-height:600px;
+    background-image:url("./images/angelina-litvin-32188-unsplash.jpg");
+    background-size:100% auto;
+    background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
+    
+   
 }
 .section__hero__container__box{
-    padding:10px;
-    color:#2d3436;
+    
+
+    width:70%;
+    height:auto;
+    padding:20px;
+    color:#1e272e;
     text-align: center;
    
     font-weight: bold;
     /* text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px; */
 }
 .section__hero__container__box__text-1{
+    margin:0;
     padding:10px;
     font-size: 34px;
     text-transform: uppercase;
@@ -35,11 +46,11 @@ body, html{
 }
 .section__hero__box__sign-in{
     font-size:25px;
-    color:#2d3436;
+    color:#1e272e;
     padding:10px;
     text-decoration: none;
     background-image: linear-gradient(#e17055,#fab1a0);
-    /* border:1px solid #2d3436; */
+   
     border-radius: 4px;
     -webkit-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
@@ -119,7 +130,7 @@ body, html{
     font-weight:bold;
     padding: 5px;
     height: 28px;
-    color:#2d3436;
+    color:#1e272e;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -150,7 +161,7 @@ body, html{
 
 .section-nav-top__flex-wrapper__menu-item__link:visited {
 	background-color: #fab1a0;
-	color: #2d3436;
+	color: #1e272e;
 
 }
 
@@ -159,10 +170,9 @@ body, html{
 		flex-direction: column;
     }
 
-    .section__hero {
-        margin-top: 310px;
-	}
-
+    .section__hero__container{
+        margin-top:0px;
+    }
 	.section-nav-top {
 		flex-direction: column;
 	}
@@ -173,18 +183,42 @@ body, html{
         align-items: center;
         align-content: center;
         background-color: #e17055;
-	}
+    }
+    .section__hero__container__box{
+        margin-top:-60px;
+       
+    }
 
     .section-nav-top__flex-wrapper--collapsed {
         max-height: 0 !important;
     }
+    /* body{
+        background-color:#ced6e0;
+    } */
+    .section__hero__container__box__text-1{
+        
+        font-size: 24px;
+       
+    }
+    .section__hero__box__features-desc{
+       
+        font-size: 18px;
+       
+    }
+    .section__hero__box__sign-in{
+        font-size:20px;
+       
+    }
+
+
+
+
+
+
 
 }
 
-/* hero */
-.section__hero {
-	margin-top: 20px;
-}
+
 
 /* product info */
 
@@ -193,9 +227,10 @@ body, html{
    align-items:center;
    justify-content:center;
    height:300px;
-   color:#fff;
+  
+   
    border: 1px solid #fff;
-   background-color:#636e72;
+   /* background-color:#ced6e0; */
 }
 
 .section-info-product{
@@ -218,12 +253,15 @@ body, html{
 
 .section-info-product__item-content{
    grid-area: item-content;
-   background-color:#2d3436;
+   background-color:#ced6e0;
    text-align: center;
    font-family: sans-serif;
-   font-size: 15px;
+   font-size: 16px;
    line-height: 35px;
    width:100%;
+   color:#1e272e;
+    font-weight:bold;
+  
 }
 
 @media screen and (max-width:575.98px){
@@ -241,15 +279,15 @@ body, html{
 
 /* team info */
 .section-team{
-    background: #e17055;
+    background: #ced6e0;
     width: 100%;
-    color:#2d3436;
+    color:#e17055;
 }
 
 .section-team__header{
     /* font-style: italic; */
     font-family: sans-serif;
-    color: #2d3436;
+    color: #e17055;
     font-size: 40px;
     text-align: center;
     padding: 20px;
@@ -309,9 +347,9 @@ body, html{
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-    color:#2d3436;
+    color:#1e272e;
 
-	background-color:#fab1a0;
+	background-color:#a4b0be;
 
 	width: 100%;
 
