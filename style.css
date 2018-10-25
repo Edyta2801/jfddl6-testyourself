@@ -1,4 +1,3 @@
-
 body, html{
     margin:0;
 	padding:0;
@@ -61,7 +60,8 @@ body, html{
 /* navbar */
 .section-nav-top{
 	position: fixed;
-	display: flex;
+    display: flex;
+    flex-direction: row;
 
 	left: 0;
 	top: 0;
@@ -72,7 +72,6 @@ body, html{
 	flex-grow: 1;
     background-color: #9E9E9E;
     flex-direction: row;
-    flex-wrap: nowrap;
 }
 
 .section-nav-top__toggle {
@@ -106,7 +105,7 @@ body, html{
 }
 
 
-.section-nav-top__flex-wrapper__menu-item__link, .section-nav-top__logo__link  {
+.section-nav-top__flex-wrapper__menu-item__link  {
     text-decoration: none;
     text-align: center;
     display: block;
@@ -114,6 +113,15 @@ body, html{
     padding: 10px;
     height: 25px;
     color:#2d3436;
+}
+
+.section-nav-top__logo__link {
+    display: flex;
+    justify-content: center;
+}
+
+.section-nav-top__logo__link__img {
+    height: 48px;
 }
 
 .section-nav-top__toggle__link {
@@ -282,7 +290,7 @@ body, html{
         justify-content:center;
         align-items: center;
     }
-/* team info */
+}
 
 /* premiere registration */
 .section__registration-premiere {
