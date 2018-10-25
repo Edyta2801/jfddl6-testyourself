@@ -1,14 +1,16 @@
 body, html{
     margin:0;
 	padding:0;
-	overflow-x: hidden;
+    overflow-x: hidden;
+    font-family: sans-serif;
+   
 }
 
 .section__hero__container{
     display:flex;
 	width:100%;
 	height: 100vh;
-    background-image:url(images/hero2.jpg);
+    background-image:url(images/1185.jpg);
     background-size:100% 100%;
     justify-content: center;
     align-items: center;
@@ -17,9 +19,9 @@ body, html{
     padding:10px;
     color:#2d3436;
     text-align: center;
-    font-family:  'Lucida Sans';
+   
     font-weight: bold;
-    text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px;
+    /* text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px; */
 }
 .section__hero__container__box__text-1{
     padding:10px;
@@ -27,7 +29,7 @@ body, html{
     text-transform: uppercase;
 }
 .section__hero__box__features-desc{
-    padding:10px;
+    padding:5px;
     font-size: 20px;
     text-align:top;
 }
@@ -36,15 +38,15 @@ body, html{
     color:#2d3436;
     padding:10px;
     text-decoration: none;
-    background-image: linear-gradient(#ff7675,#e9a3a3);
-    border:1px solid #2d3436;
-    border-radius: 6px;
+    background-image: linear-gradient(#e17055,#fab1a0);
+    /* border:1px solid #2d3436; */
+    border-radius: 4px;
     -webkit-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
     -moz-box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
     box-shadow: 9px 10px 26px 4px rgba(0,0,0,0.75);
 }
 .section__hero__box__sign-in:hover{
-    background-image: linear-gradient(#e9a3a3,#ff7675);
+    background-image: linear-gradient(#fab1a0,#e17055);
     color: #636e72;
 }
 
@@ -70,19 +72,20 @@ body, html{
 
 .section-nav-top__logo {
 	flex-grow: 1;
-    background-color: #9E9E9E;
+    background-color: #e17055;
     flex-direction: row;
 }
 
 .section-nav-top__toggle {
-	display: none;
+    display: none;
+    background-color: #e17055;
 }
 
 .section-nav-top__toggle__button {
-    width: 35px;
-    height: 5px;
+    width: 25px;
+    height: 2px;
     background-color: black;
-    margin: 6px 0;
+    margin: 2px 0;
 }
 
 .section-nav-top__flex-wrapper {
@@ -101,7 +104,7 @@ body, html{
 
 .section-nav-top__flex-wrapper__menu-item {
 	flex-grow: 1;
-	background-color: #74b9ff;
+	background-color: #e17055;
 }
 
 
@@ -110,8 +113,9 @@ body, html{
     text-align: center;
     display: block;
     font-size: 18px;
-    padding: 10px;
-    height: 25px;
+    font-weight:bold;
+    padding: 5px;
+    height: 28px;
     color:#2d3436;
 }
 
@@ -129,17 +133,17 @@ body, html{
     text-align: center;
     display: block;
     font-size: 18px;
-	padding: 10px;
-    color:#2d3436;
+	padding: 5px;
+    color:#e17055;
 }
 
 .section-nav-top__flex-wrapper__menu-item__link:hover {
-    background-color: #0984e3;
+    background-color: #fab1a0;
 
 }
 
 .section-nav-top__flex-wrapper__menu-item__link:visited {
-	background-color: #0984e3;
+	background-color: #fab1a0;
 	color: #2d3436;
 
 }
@@ -162,7 +166,7 @@ body, html{
         flex-direction: column;
         align-items: center;
         align-content: center;
-        background-color: #9E9E9E;
+        background-color: #e17055;
 	}
 
     .section-nav-top__flex-wrapper--collapsed {
@@ -210,7 +214,7 @@ body, html{
    grid-area: item-content;
    background-color:#2d3436;
    text-align: center;
-   font-family: Arial, Helvetica, sans-serif;
+   font-family: sans-serif;
    font-size: 15px;
    line-height: 35px;
    width:100%;
@@ -231,14 +235,15 @@ body, html{
 
 /* team info */
 .section-team{
-    background: orange;
+    background: #e17055;
     width: 100%;
+    color:#2d3436;
 }
 
 .section-team__header{
-    font-style: italic;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: purple;
+    /* font-style: italic; */
+    font-family: sans-serif;
+    color: #2d3436;
     font-size: 40px;
     text-align: center;
     padding: 20px;
@@ -254,7 +259,7 @@ body, html{
     text-align: center;
     font-size: 30px;
     line-break: auto;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:  sans-serif;
 }
 
 .section-team__img{
@@ -298,9 +303,10 @@ body, html{
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+    color:#2d3436;
 
+	background-color:#e17055;
 
-	background-color: #ffc34d;
 	width: 100%;
 
 	padding: 20px 0;
