@@ -56,9 +56,6 @@ body, html{
 	align-content: center;
 	flex-grow: 1;
 }
-
-
-/* navbar */
 .section-nav-top{
 	position: fixed;
 	display: flex;
@@ -277,12 +274,16 @@ body, html{
         align-items: center;
         border: 1px solid #000000;
     }
-    .fb{
+    .fb-link{
         display: flex;
         justify-content:center;
         align-items: center;
     }
-/* team info */
+    .gh-link{
+        display: flex;
+        justify-content: center;
+        align-self: auto;
+    }
 
 /* premiere registration */
 .section__registration-premiere {
