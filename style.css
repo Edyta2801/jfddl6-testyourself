@@ -311,7 +311,7 @@ body, html{
 	align-items: center;
     color:#2d3436;
 
-	background-color:#e17055;
+	background-color:#fab1a0;
 
 	width: 100%;
 
@@ -330,6 +330,13 @@ body, html{
 	margin: 0 2px;
 	text-align: center;
 }
+
+.section-registration-premiere__header__container{
+    margin:0;
+    padding:15px;
+}
+
+
 
 .section-registration-premiere__form-container__button-register {
 	background-color: #607D8B;
