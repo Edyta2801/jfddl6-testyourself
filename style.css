@@ -10,14 +10,15 @@ body, html{
 .section__hero__container{
     margin-top:40px;
     display:flex;
-	width:130vh;
-    height: auto;
-    min-height:600px;
+	width:100%;
+    height: 80vh;
+    /* min-height:600px; */
     background-image:url("./images/angelina-litvin-32188-unsplash.jpg");
-    background-size:100% auto;
+    background-size:cover;
     background-repeat: no-repeat;
     justify-content: center;
     align-items: center;
+    background-position:center;
     
    
 }
