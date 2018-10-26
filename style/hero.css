@@ -1,0 +1,55 @@
+.section__hero__container {
+  margin-top: 40px;
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  /* min-height:600px; */
+  background-image: url("./../images/angelina-litvin-32188-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+.section__hero__container__box {
+  width: 70%;
+  height: auto;
+  padding: 20px;
+  color: #1e272e;
+  text-align: center;
+
+  font-weight: bold;
+  /* text-shadow: rgb(171, 171, 171) 1px 0px 0px, rgb(171, 171, 171) 0.540302px 0.841471px 0px, rgb(171, 171, 171) -0.416147px 0.909297px 0px, rgb(171, 171, 171) -0.989992px 0.14112px 0px, rgb(171, 171, 171) -0.653644px -0.756802px 0px, rgb(171, 171, 171) 0.283662px -0.958924px 0px, rgb(171, 171, 171) 0.96017px -0.279415px 0px; */
+}
+.section__hero__container__box__text-1 {
+  margin: 0;
+  padding: 10px;
+  font-size: 34px;
+  text-transform: uppercase;
+}
+.section__hero__box__features-desc {
+  padding: 5px;
+  font-size: 20px;
+  text-align: top;
+}
+.section__hero__box__sign-in {
+  font-size: 25px;
+  color: #1e272e;
+  padding: 10px;
+  text-decoration: none;
+  background-image: linear-gradient(#e17055, #fab1a0);
+
+  border-radius: 4px;
+  -webkit-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+}
+.section__hero__box__sign-in:hover {
+  background-image: linear-gradient(#fab1a0, #e17055);
+  color: #636e72;
+}
+
+/* hero */
+.section__hero {
+  margin-top: 20px;
+}

@@ -1,0 +1,62 @@
+.section-team {
+    background: #ced6e0;
+    width: 100%;
+    color: #e17055;
+  }
+
+  .section-team__header {
+    /* font-style: italic; */
+    font-family: sans-serif;
+    color: #e17055;
+    font-size: 40px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .section-team__container {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-around;
+    flex-basis: 25%;
+    text-align: center;
+    font-size: 30px;
+    line-break: auto;
+    font-family: sans-serif;
+  }
+
+  .section-team__img {
+    border-radius: 50%;
+    range: auto;
+  }
+
+  .section-team__fb-link {
+    background: url(/photos/fb.png) no-repeat center;
+    background-size: 80%;
+    text-decoration-line: none;
+  }
+
+  @media only screen and (max-width: 767px) {
+    .section-team__container {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+    }
+    .section-team__container--elements {
+      flex-direction: row;
+      justify-content: center;
+      align-content: space-between;
+    }
+    .section-features__container--elements p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #000000;
+    }
+    .fb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
