@@ -102,6 +102,7 @@
     flex-direction: column;
   }
 
+
   .section-nav-top__toggle {
     display: flex;
     flex-direction: column;
@@ -112,5 +113,9 @@
 
   .section-nav-top__flex-wrapper--collapsed {
     max-height: 0 !important;
+  }
+
+  .section-nav-top__flex-wrapper__menu-item:last-child {
+    padding-bottom: 5px;
   }
 }
