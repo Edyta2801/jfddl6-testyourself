@@ -1,4 +1,4 @@
-.section__registration-premiere {
+.section-registration-premiere {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -18,19 +18,19 @@
   justify-content: center;
 }
 
-.section-registration-premiere__form-container__text-register {
+.section-registration-premiere__form-container-text-register {
   height: 25px;
   font-size: 18px;
   margin: 0 2px;
   text-align: center;
 }
 
-.section-registration-premiere__header__container {
+.section-registration-premiere__header-container {
   margin: 0;
   padding: 15px;
 }
 
-.section-registration-premiere__form-container__button-register {
+.section-registration-premiere__form-container-button-register {
   background-color: #607d8b;
   color: white;
   border: none;
@@ -45,11 +45,11 @@
   text-align: center;
 }
 
-.section-registration-premiere__form-container__button-register:hover {
+.section-registration-premiere__form-container-button-register:hover {
   background-color: #7a8e9c;
 }
 
-.section-registration-premiere__form-container__button-register:focus {
+.section-registration-premiere__form-container-button-register:focus {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
   -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
   box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
