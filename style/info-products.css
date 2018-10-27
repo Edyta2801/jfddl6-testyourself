@@ -30,7 +30,7 @@
 
 .section-info-product__item-content {
   grid-area: item-content;
-  background-color: #ced6e0;
+  background-color: whitesmoke;
   text-align: center;
   font-family: sans-serif;
   font-size: 16px;
