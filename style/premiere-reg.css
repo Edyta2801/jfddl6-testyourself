@@ -1,4 +1,4 @@
-.section__registration-premiere {
+.section-registration-premiere {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -15,21 +15,21 @@
   justify-content: center;
 }
 
-.section-registration-premiere__form-container__text-register {
+.section-registration-premiere__form-container-text-register {
   height: 25px;
   font-size: 18px;
   margin: 0 2px;
   text-align: center;
 }
 
-.section-registration-premiere__header__container {
+.section-registration-premiere__header-container {
   margin: 0;
   padding: 15px;
+  text-align: center;
 }
 
-.section-registration-premiere__form-container__button-register {
-  background-color: #607d8b;
-  color: white;
+.section-registration-premiere__form-container-button-register {
+
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -39,13 +39,23 @@
   font-size: 18px;
   margin: 0 2px;
   text-align: center;
+
+  color: #1e272e;
+
+  background-image: linear-gradient(#e17055, #fab1a0);
+
+  border-radius: 4px;
+  -webkit-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
 }
 
-.section-registration-premiere__form-container__button-register:hover {
-  background-color: #7a8e9c;
+.section-registration-premiere__form-container-button-register:hover {
+  background-image: linear-gradient(#fab1a0, #e17055);
+    color: #636e72;
 }
 
-.section-registration-premiere__form-container__button-register:focus {
+.section-registration-premiere__form-container-button-register:focus {
   -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
   -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
   box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
