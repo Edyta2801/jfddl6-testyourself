@@ -4,11 +4,8 @@
   flex-direction: column;
   align-items: center;
   color: #1e272e;
-
-  background-color: #a4b0be;
-
+  background-color: whitesmoke;
   width: 100%;
-
   padding: 20px 0;
 }
 
@@ -28,6 +25,7 @@
 .section-registration-premiere__header-container {
   margin: 0;
   padding: 15px;
+  text-align: center;
 }
 
 .section-registration-premiere__form-container-button-register {
@@ -40,7 +38,6 @@
   height: 30px;
   font-size: 18px;
   margin: 0 2px;
-
   text-align: center;
 
   color: #1e272e;

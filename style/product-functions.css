@@ -1,7 +1,7 @@
 .container {
   margin: 0 auto;
   padding: 0;
-  background-color: #636e72;
+  background-color: #ced6e0;
   width: 100%;
 }
 
@@ -21,16 +21,19 @@
   display: flex;
   flex-basis: 25%;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-evenly;
   flex-direction: column;
   background: whitesmoke;
   padding: 20px;
-  margin: 20px;
+  margin: 10px;
   box-sizing: border-box;
-  border: 5px solid gainsboro;
-  border-radius: 10px;
-  text-align: justify;
+  border: 1px solid gainsboro;
+  text-align: center;
+  color:#1e272e;
+  font-weight: bold;
+  font-family: sans-serif;
   width: 100%;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .section-function__item-img {

@@ -2,14 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
-  border: 1px solid #fff;
+  height: 300px; 
 }
 
 .section-info-product {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "item-photo item-content";
+  /*dodalem troche glebi tu i tam */ 
+  margin:10px;
+  box-sizing:border-box;
+  box-shadow: 5px 5px 5px grey;
+  border: 0px solid #fff;
 }
 
 .section-info-product--reversed {
@@ -34,6 +38,7 @@
   width: 100%;
   color: #1e272e;
   font-weight: bold;
+  justify-content: center;  
 }
 
 @media screen and (max-width: 575.98px) {

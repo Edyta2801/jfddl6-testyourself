@@ -1,18 +1,17 @@
 .section-team {
     background: #ced6e0;
     width: 100%;
-    color: #e17055;
+    color: #1e272e;
+    font-weight:bold;  
   }
 
   .section-team__header {
-    /* font-style: italic; */
     font-family: sans-serif;
-    color: #e17055;
-    font-size: 40px;
-    text-align: center;
-    padding: 20px;
+    color: #1e272e;
+    font-size: 36px;
+    text-align: center; 
   }
-
+  
   .section-team__container {
     padding: 5px;
     display: flex;
@@ -21,14 +20,16 @@
     justify-content: space-around;
     flex-basis: 25%;
     text-align: center;
-    font-size: 30px;
+    font-size: 24px;
     line-break: auto;
     font-family: sans-serif;
+    
   }
 
   .section-team__img {
     border-radius: 50%;
     range: auto;
+    box-shadow: 5px 5px 5px grey;
   }
 
   .section-team__fb-link {
