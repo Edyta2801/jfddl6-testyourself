@@ -25,7 +25,7 @@
 
 .section-registration-premiere__header-container {
   margin: 0;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
 }
 
@@ -36,28 +36,23 @@
   cursor: pointer;
   letter-spacing: 2px;
   outline: none;
-  height: 30px;
+  height: 36px;
   font-size: 18px;
+  font-weight: bold;
+  font-family: sans-serif;
   margin: 0 2px;
   text-align: center;
-
   color: #1e272e;
-
-  background-image: linear-gradient(#e17055, #fab1a0);
-
+  background-color:#e17055;
   border-radius: 4px;
-  -webkit-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
-  box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
 
 .section-registration-premiere__form-container-button-register:hover {
-  background-image: linear-gradient(#fab1a0, #e17055);
+  background-color:#fab1a0;
     color: #636e72;
 }
 
 .section-registration-premiere__form-container-button-register:focus {
-  -webkit-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
-  -moz-box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
-  box-shadow: 0px 0px 15px 5px rgba(204, 204, 204, 0.9);
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
