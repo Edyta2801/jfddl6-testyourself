@@ -35,8 +35,9 @@
   .section-team__fb-link {
     background-image: url(/images/F_icon.svg) no-repeat center;
     background-size: 80%;
-    text-decoration-line: none;
+    text-decoration-line: none;    
   }
+
 
   @media only screen and (max-width: 767px) {
     .section-team__container {
