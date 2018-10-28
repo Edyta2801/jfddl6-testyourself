@@ -4,6 +4,10 @@
   justify-content: center;
   height: 300px; 
 }
+.section-info-product__text{
+  padding:10px;
+  text-align: justify;
+}
 
 .section-info-product {
   display: grid;
@@ -26,7 +30,7 @@
   grid-area: item-photo;
   background-size: cover;
   width: 100%;
-}
+  }
 
 .section-info-product__item-content {
   grid-area: item-content;

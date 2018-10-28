@@ -8,7 +8,7 @@
   .section-team__header {
     font-family: sans-serif;
     color: #1e272e;
-    font-size: 36px;
+    font-size: 34px;
     text-align: center; 
   }
   
@@ -33,10 +33,11 @@
   }
 
   .section-team__fb-link {
-    background: url(/photos/fb.png) no-repeat center;
+    background-image: url(/images/F_icon.svg) no-repeat center;
     background-size: 80%;
-    text-decoration-line: none;
+    text-decoration-line: none;    
   }
+
 
   @media only screen and (max-width: 767px) {
     .section-team__container {
