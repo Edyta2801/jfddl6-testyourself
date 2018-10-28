@@ -92,9 +92,9 @@
     flex-direction: column;
   }
 
-  .section__hero {
+  /* .section__hero {
     margin-top: 310px;
-  }
+  } */
 
   .section-nav-top {
     flex-direction: column;

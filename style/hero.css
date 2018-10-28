@@ -1,4 +1,4 @@
-.section__hero__container {
+.section-hero {
   margin-top: 40px ;
   display: flex;
   width: 100%;
@@ -11,7 +11,7 @@
   background-position: center;
   box-sizing:border-box;
 }
-.section__hero__container__box {
+.section-hero__container {
   width: 70%;
   height: auto;
   padding: 20px;
@@ -19,18 +19,18 @@
   text-align: center;
   font-weight: bold; 
 }
-.section__hero__container__box__text-1 {
+.section-hero__header {
   margin: 0;
   padding: 10px;
   font-size: 36px;
   text-transform: uppercase;
 }
-.section__hero__box__features-desc {
+.section-hero__info {
   padding: 5px;
   font-size: 20px;
   text-align: top;
 }
-.section__hero__box__sign-in {
+.section-hero__sign-in-button {
   font-size: 25px;
   color: #1e272e;
   padding: 10px;
@@ -39,10 +39,8 @@
   border-radius: 4px;
   box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
 }
-.section__hero__box__sign-in:hover {
+.section-hero__sign-in-button:hover {
   background-color:#fab1a0;
   color: #636e72;
 }
-.section__hero {
-  margin-top: 20px;
-}
+
