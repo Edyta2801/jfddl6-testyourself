@@ -6,6 +6,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  z-index:2;
 }
 
 .section-nav-top__logo {
@@ -98,6 +99,7 @@
 
   .section-nav-top {
     flex-direction: column;
+    z-index:2;
   }
 
   .section-nav-top__toggle {

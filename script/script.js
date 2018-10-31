@@ -19,33 +19,5 @@ menuToggle.addEventListener("click", event => {
   }
 });
 
-/*slideshow*/
-let index=0;
-const images = [
-  "url('/images/hero1.jpg')",
-  "url('/images/hero2.jpg')",
-  "url('/images/hero3.jpg')",
-  "url('/images/hero4.jpg')"
-];
-let heroBox = document.body.querySelector('#section-hero');
-let dots = document.getElementsByClassName("dot");
-function showSlide() {
-  
-  if (index < images.length) {
-    
-    heroBox.style.backgroundImage = images[index];
-    dots[index].style.backgroundColor="white";
-    dots[index].style.backgroundColor ="red";
-    
-    index++;
-  } else index=0;
 
-  setTimeout(showSlide,1000);
-
-}
-  
-
-
-
-showSlide();
 
