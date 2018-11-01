@@ -38,11 +38,11 @@ document.addEventListener('scroll', () => {
 
     if (Math.ceil(window.scrollY + window.innerHeight) === document.body.clientHeight) {
         navItems[4].setActive();
-    } else if (window.scrollY + 6 * navbarHeight > navItems[3].sectionEl.offsetTop) {
+    } else if (window.scrollY + 8 * navbarHeight > navItems[3].sectionEl.offsetTop) {
         navItems[3].setActive();
     } else if (window.scrollY + 2 * navbarHeight > navItems[2].sectionEl.offsetTop) {
         navItems[2].setActive();
-    } else if (window.scrollY + 3 * navbarHeight > navItems[1].sectionEl.offsetTop) {
+    } else if (window.scrollY + 6 * navbarHeight > navItems[1].sectionEl.offsetTop) {
         navItems[1].setActive();
     } else {
         navItems[0].setActive();
