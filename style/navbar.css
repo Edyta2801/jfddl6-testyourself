@@ -115,3 +115,36 @@
 .active {
   background-color: red;
 }
+
+@media only screen and (min-width: 992px ) {
+  #section-hero__marker {
+    position:absolute;
+    width:1px;
+    height:1px;
+    top: 0px;
+  }
+  #section-function__marker {
+    position:absolute;
+    width:1px;
+    height:1px;
+    top: 572px;
+  }
+  #section-info-products__marker {
+    position:absolute;
+    width:1px;
+    height:1px;
+    top: 790px;
+  }
+  #section-info-team__marker {
+    position:absolute;
+    width:1px;
+    height:1px;
+    top:3255px;
+  }
+  #section-registration-premiere__marker {
+    position:absolute;
+    width:1px;
+    height:1px;
+    top:3538px;
+  }
+}

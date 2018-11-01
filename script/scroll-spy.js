@@ -1,78 +1,48 @@
-homeNavId = document.querySelector('#section-nav-top__home-id');
-functionNavId = document.querySelector('#section-nav-top__function-id');
-productNavId = document.querySelector('#section-nav-top__product-id');
-teamNavId = document.querySelector('#section-nav-top__team-id');
-premiereNavId = document.querySelector('#section-nav-top__premiere-reg-id');
 
-function NavItem(itemId, sectionId) {
-    this.id = itemId;
-    this.sectionId = sectionId;
+'use strict'
+const linkNames = ['home-id', 'function-id', 'product-id', 'team-id', 'premiere-reg-id'];
+const sectionNames = ['hero', 'function', 'info-products', 'info-team', 'registration-premiere'];
+
+const navLinks = linkNames.map((element) => {
+    return document.querySelector(`#section-nav-top__${element}`);
+});
+
+const navSections = sectionNames.map((element) => {
+    return document.querySelector(`#section-${element}`);
+});
+
+function NavItem(itemEl, sectionEl) {
+    this.itemEl = itemEl;
+    this.sectionEl = sectionEl;
+    this.elementHeight = this.sectionEl.clientHeight;
 }
 
+NavItem.prototype.setActive = function () {
+    this.itemEl.classList.add('active');
+}
+NavItem.prototype.setInActive = function () {
+    this.itemEl.classList.remove('active');
+}
 
+let navItems = navLinks.map((element, i) => {
+    return new NavItem(element, navSections[i]);
+});
 
+document.addEventListener('scroll', () => {
+    navItems.forEach((element) => {
+        element.setInActive();
+    })
 
-
-
-
-
-// inView("#section-hero")
-//   .on("enter", function() {
-//     document
-//       .querySelector("#section-nav-top__home-id")
-//       .classList.add("active");
-//       console.log('jest w hero')
-//   })
-//   .on("exit", function() {
-//     document
-//       .querySelector("#section-nav-top__home-id")
-//       .classList.remove("active");
-//   });
-
-// inView("#section-function")
-//   .on("enter", function() {
-//     document
-//       .querySelector("#section-nav-top__function-id")
-//       .classList.add("active");
-//   })
-//   .on("exit", function() {
-//     document
-//       .querySelector("#section-nav-top__function-id")
-//       .classList.remove("active");
-//   });
-
-// inView("#section-info-products")
-//   .on("enter", function() {
-//     document
-//       .querySelector("#section-nav-top__product-id")
-//       .classList.add("active");
-//   })
-//   .on("exit", function() {
-//     document
-//       .querySelector("#section-nav-top__product-id")
-//       .classList.remove("active");
-//   });
-
-// inView("#section-info-team")
-//   .on("enter", function() {
-//     document
-//       .querySelector("#section-nav-top__team-id")
-//       .classList.add("active");
-//   })
-//   .on("exit", function() {
-//     document
-//       .querySelector("#section-nav-top__team-id")
-//       .classList.remove("active");
-//   });
-
-// inView("#section-registration-premiere")
-//   .on("enter", function() {
-//     document
-//       .querySelector("#section-nav-top__premiere-reg-id")
-//       .classList.add("active");
-//   })
-//   .on("exit", function() {
-//     document
-//       .querySelector("#section-nav-top__premiere-reg-id")
-//       .classList.remove("active");
-//   });
+    if (window.scrollY < 560) {
+        navItems[0].setActive();
+    } else if (window.scrollY >= 560 && window.scrollY < 790) {
+        navItems[1].setActive();
+    } else if (window.scrollY >= 790 && window.scrollY < 3159) {
+        navItems[2].setActive();
+    } else if (window.scrollY >= 3159 && window.scrollY < 3259) {
+        navItems[3].setActive();
+    } else {
+        navItems[4].setActive();
+    }
+    console.log(window.scrollY)
+});

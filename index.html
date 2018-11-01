@@ -27,7 +27,8 @@
     <main class="main">
         <nav id="section-nav-top" class="section-nav-top">
             <div class="section-nav-top__logo">
-                <a class="section-nav-top__logo-link" href="#"><img class="section-nav-top__logo-img" src="./images/logo.svg"></a>
+                <a class="section-nav-top__logo-link" href="#">
+                    <img class="section-nav-top__logo-img" src="./images/logo.svg"></a>
                 <div class="section-nav-top__toggle">
                     <a class="section-nav-top__toggle-link" href="#">
                         <div class="section-nav-top__toggle-button"></div>
@@ -37,20 +38,21 @@
                 </div>
             </div>
             <ul class="section-nav-top__flex-wrapper">
-                <li class="section-nav-top__item"><a id="section-nav-top__home-id" class="section-nav-top__link"
-                        href="#section-hero">Home</a></li>
-                <li class="section-nav-top__item"><a id="section-nav-top__function-id" class="section-nav-top__link"
-                        href="#section-function">Funkcje</a></li>
-                <li class="section-nav-top__item"><a id="section-nav-top__product-id" class="section-nav-top__link"
-                        href="#section-info-products">Produkt</a></li>
-                <li class="section-nav-top__item"><a id="section-nav-top__team-id" class="section-nav-top__link"
-                        href="#section-info-team">Zespół</a></li>
-                <li class="section-nav-top__item"><a id="section-nav-top__premiere-reg-id" class="section-nav-top__link"
-                        href="#section-registration-premiere">Premiera</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__home-id" class="section-nav-top__link active" href="#section-hero__marker">Home</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__function-id" class="section-nav-top__link" href="#section-function__marker">Funkcje</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__product-id" class="section-nav-top__link" href="#section-info-products__marker">Produkt</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__team-id" class="section-nav-top__link" href="#section-info-team__marker">Zespół</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__premiere-reg-id" class="section-nav-top__link" href="#section-registration-premiere__marker">Premiera</a></li>
             </ul>
         </nav>
         <!-- hero -->
         <section id="section-hero" class="section-hero">
+            <div id="section-hero__marker"></div>
             <div class="section-hero__container">
                 <p class="section-hero__header">Sprawdź swoją wiedzę <br> #test-Yourself</p>
                 <p class="section-hero__info">Nie czekaj! Wybierz swoją dziedzinę <br> Rozwiąż
@@ -62,6 +64,7 @@
             </div>
         </section>
         <section id="section-function" class="section-function__container container">
+            <div id="section-function__marker"></div>
             <div class="section-function__item">
                 <div class="section-function__container-text">
                     Łatwy dostęp i prosta, intuicyjna obsługa aplikacji.
@@ -88,6 +91,7 @@
             </div>
         </section>
         <section id="section-info-products" class="section section__info-products">
+            <div id="section-info-products__marker"></div>
             <div class="section-info-product">
                 <img src="images/image1.jpg" class="section-info-product__item section-info-product__item-photo" alt="photo" />
                 <div class="section-info-product__item section-info-product__item-content">TWÓRZ NOWE TESTY !!!<br>
@@ -138,6 +142,7 @@
             </div>
         </section>
         <section id="section-info-team" class="section section-team">
+            <div id="section-info-team__marker"></div>
             <h2 class="section-team__header">Nasz team</h2>
             <div class="section-team__container">
                 <div class="section-team__container--elements">
@@ -185,6 +190,7 @@
         </section>
 
         <section id="section-registration-premiere" class="section-registration-premiere">
+            <div id="section-registration-premiere__marker"></div>
             <h3 class="section-registration-premiere__header-container">Jesteś zainteresowany?</h3>
             <h3 class="section-registration-premiere__header-container">Daj nam znać, odezwiemy się!</h3>
             <h6 class="section-registration-premiere__header-container">Twoje dane personalne zostaną wykorzystane
