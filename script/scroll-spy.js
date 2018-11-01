@@ -11,6 +11,8 @@ const navSections = sectionNames.map((element) => {
     return document.querySelector(`#section-${element}`);
 });
 
+const navbarHeight = document.querySelector('.section-nav-top').clientHeight;
+
 function NavItem(itemEl, sectionEl) {
     this.itemEl = itemEl;
     this.sectionEl = sectionEl;
@@ -33,16 +35,33 @@ document.addEventListener('scroll', () => {
         element.setInActive();
     })
 
-    if (window.scrollY < 560) {
-        navItems[0].setActive();
-    } else if (window.scrollY >= 560 && window.scrollY < 790) {
-        navItems[1].setActive();
-    } else if (window.scrollY >= 790 && window.scrollY < 3159) {
-        navItems[2].setActive();
-    } else if (window.scrollY >= 3159 && window.scrollY < 3259) {
-        navItems[3].setActive();
-    } else {
+    if (document.documentElement.scrollHeight - document.documentElement.scrollTop == document.documentElement.clientHeight) {
         navItems[4].setActive();
     }
-    console.log(window.scrollY)
+    // } else if () {
+
+    // } else if () {
+
+    // } else if () {
+
+    // } else () {
+
+    // }
+
+    console.log(document.documentElement.clientHeight)
+    console.log((document.documentElement.scrollHeight - document.documentElement.scrollTop ));
+
 });
+
+
+// if ((window.scrollY >= (navItems[0].sectionEl.offsetTop - navbarHeight)) && (window.scrollY < (navItems[0].sectionEl.offsetTop - navbarHeight + navItems[0].sectionEl.clientHeight)) ) {
+//     navItems[0].setActive();
+// } else if ((window.scrollY >= navItems[1].sectionEl.offsetTop - navbarHeight)  && (window.scrollY < (navItems[1].sectionEl.offsetTop - navbarHeight + navItems[1].sectionEl.clientHeight) ) ) {
+//     navItems[1].setActive();
+// } else if ((window.scrollY >= navItems[2].sectionEl.offsetTop - navbarHeight)  && (window.scrollY < (navItems[2].sectionEl.offsetTop - navbarHeight + navItems[2].sectionEl.clientHeight)) ) {
+//     navItems[2].setActive();
+// } else if ((window.scrollY >= navItems[3].sectionEl.offsetTop - navbarHeight)  && (window.scrollY < (navItems[3].sectionEl.clientHeight - navbarHeight + navItems[3].sectionEl.clientHeight)) ) {
+//     navItems[3].setActive();
+// } else {
+//     navItems[4].setActive();
+// }
