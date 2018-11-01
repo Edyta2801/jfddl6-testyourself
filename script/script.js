@@ -18,3 +18,6 @@ menuToggle.addEventListener("click", event => {
     menuList.classList.add("section-nav-top__flex-wrapper--collapsed");
   }
 });
+
+
+
