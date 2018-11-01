@@ -1,7 +1,7 @@
 const menuToggle = document.querySelector(".section-nav-top__toggle");
 const menuList = document.querySelector(".section-nav-top__flex-wrapper");
 const menuListItems = document.querySelectorAll(
-  ".section-nav-top__flex-wrapper-menu-item"
+  ".section-nav-top__item"
 );
 
 const menuListHeight = menuListItems[0].clientHeight * menuListItems.length;
