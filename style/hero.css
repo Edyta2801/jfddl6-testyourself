@@ -49,16 +49,14 @@
 .section-hero__nav-box{
   text-align:center;
 }
-.dot--active{
-  background-color: black;
-}
+
 
 .section-hero__slide-indicator {
+  display: inline-block;
   height: 15px;
   width: 15px;
   margin: 0 2px;
   background-color: grey;
-  display: inline-block;
-  opacity:0.8;
-  
+  opacity:0.5;
+  box-sizing:border-box;  
 }
