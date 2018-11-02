@@ -1,5 +1,5 @@
 
-let index = 0;
+let carouselAcctualImageIndex = 0;
 let imageNumber;
 let autoCarousel = true;
 const squareIndicator = document.body.querySelectorAll('.section-hero__slide-indicator');
@@ -21,23 +21,22 @@ function clearSquareIndicators() {
 }
 
 function startAutoSlide() {
-  autoCarousel = true;
-  // carousel()
-  console.log('startAutoSlide',autoCarousel)
-  // carousel()
+  if (autoCarousel == false) {
+    autoCarousel = true;
+    carouselAcctualImageIndex = imageNumber
+    carousel()
+  }
 }
 
 function carousel() {
-  
-  console.log('inside carousel',autoCarousel)
   if (autoCarousel == true) {
     hideBackgroundImages();
     clearSquareIndicators();
-    index++;
-    if (index > imageBox.length) { index = 1 }
-    imageBox[index - 1].style.display = "initial";
-    squareIndicator[index - 1].style.backgroundColor = "black";
-    setTimeout(carousel, 3000);
+    carouselAcctualImageIndex++;
+    if (carouselAcctualImageIndex > imageBox.length) { carouselAcctualImageIndex = 1 }
+    imageBox[carouselAcctualImageIndex - 1].style.display = "initial";
+    squareIndicator[carouselAcctualImageIndex - 1].style.backgroundColor = "black";
+    setTimeout(carousel, 8000);
   }
 }
 
@@ -61,20 +60,15 @@ function goToSlide() {
       imageBox[index].style.display = "none"
     } else imageBox[pressedSquareBoxId].style.display = "initial";
   }
+  imageNumber = pressedSquareBoxId;
 }
-
-
-
-
 
 function eventListener() {
   for (let i = 0; i < imageBox.length; i++) {
     squareIndicator[i].addEventListener("mouseover", getFocus);
     squareIndicator[i].addEventListener("mouseout", outOfFocus);
     squareIndicator[i].addEventListener("click", goToSlide)
-
   }
-  console.log(sectionHero)
   sectionHero.addEventListener("mouseleave", startAutoSlide)
 }
 
