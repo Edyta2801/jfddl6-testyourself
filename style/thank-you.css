@@ -1,21 +1,21 @@
 .thank-you__container {
     display: flex;
-    align-content: center;
-    justify-content: center;
     flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 
     height: 100vh;
     background-color: #a4b0be;
 }
-.thank-you__text {
+.thank-you__text-container {
     display: flex;
     align-content: center;
     justify-content: center;
 
     margin: 0;
-    padding: 10px;
-    font-size: 34px;
-    text-transform: uppercase;
+
+    font-size: 24px;
 }
 
 .thank-you__back-button {
@@ -25,19 +25,45 @@
 }
 
 .thank-you__button-link {
-  font-size: 25px;
+  font-size: 24px;
   color: #1e272e;
   padding: 10px;
   text-decoration: none;
-  background-image: linear-gradient(#e17055, #fab1a0);
+
 
   border-radius: 4px;
   -webkit-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
   box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
+
+
+
+
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+
+  font-weight: bold;
+  font-family: sans-serif;
+
+  color: #1e272e;
+  background-color:#e17055;
+  border-radius: 4px;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+
 }
 
 .thank-you__button-link:hover {
     background-image: linear-gradient(#fab1a0, #e17055);
     color: #636e72;
+}
+
+.thank-you__text-header-one {
+    margin: 0px;
+    padding: 4px;
+}
+.thank-you__text-header-two {
+    margin: 0px;
+    padding: 4px;
 }

@@ -31,20 +31,30 @@ let navItems = navLinks.map((element, i) => {
 });
 
 document.addEventListener('scroll', () => {
-    navItems.forEach((element) => {
-        element.setInActive();
-    })
-
-
     if (Math.ceil(window.scrollY + window.innerHeight) === document.body.clientHeight) {
+        navItems.forEach((element) => {
+            element.setInActive();
+        })
         navItems[4].setActive();
     } else if (window.scrollY + 8 * navbarHeight > navItems[3].sectionEl.offsetTop) {
+        navItems.forEach((element) => {
+            element.setInActive();
+        })
         navItems[3].setActive();
     } else if (window.scrollY + 2 * navbarHeight > navItems[2].sectionEl.offsetTop) {
+        navItems.forEach((element) => {
+            element.setInActive();
+        })
         navItems[2].setActive();
     } else if (window.scrollY + 6 * navbarHeight > navItems[1].sectionEl.offsetTop) {
+        navItems.forEach((element) => {
+            element.setInActive();
+        })
         navItems[1].setActive();
     } else {
+        navItems.forEach((element) => {
+            element.setInActive();
+        })
         navItems[0].setActive();
     }
 });
