@@ -1,5 +1,6 @@
 
 let index = 0;
+let imageNumber;
 let autoCarousel = true;
 const squareIndicator = document.body.querySelectorAll('.section-hero__slide-indicator');
 const imageBox = document.body.querySelectorAll('.section-hero__background');
@@ -26,11 +27,7 @@ function carousel() {
     imageBox[index - 1].style.display = "initial";
     squareIndicator[index - 1].style.backgroundColor = "black";
     setTimeout(carousel, 5000);
-  } else {
-
-  }
-
-
+  } 
 }
 
 const getObject = (event) => event.target;
@@ -44,16 +41,16 @@ function outOfFocus() {
 }
 function goToSlide() {
   autoCarousel = false;
+  let pressedSquareBox =getObject(event)
+  let pressedSquareBoxId= parseInt(pressedSquareBox.id);
   clearSquareIndicators();
-  let obj =getObject(event)
-  obj.style.backgroundColor = "black";
-  
-  
-  
-  
+  pressedSquareBox.style.backgroundColor = "black";
+  for (let index = 0; index < imageBox.length; index++) {
+    if(imageBox[index]!=imageBox[pressedSquareBoxId]){
+      imageBox[index].style.display= "none"
+    }else imageBox[pressedSquareBoxId].style.display= "initial";  
+  }
 }
-
-
 
 function eventListener() {
   for (let i = 0; i < imageBox.length; i++) {
