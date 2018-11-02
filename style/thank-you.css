@@ -1,3 +1,19 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-color: #ced6e0;
+  }
+
+  .body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    flex-grow: 1;
+  }
+
 .thank-you__container {
     display: flex;
     flex-direction: column;
