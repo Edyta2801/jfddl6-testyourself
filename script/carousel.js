@@ -1,4 +1,3 @@
-
 let carouselAcctualImageIndex = 0;
 let imageNumber;
 let autoCarousel = true;
@@ -39,7 +38,6 @@ function carousel() {
     setTimeout(carousel, 8000);
   }
 }
-
 const getObject = (event) => event.target;
 
 function getFocus() { getObject(event).style.border = "2px solid white"; }
@@ -62,7 +60,6 @@ function goToSlide() {
   }
   imageNumber = pressedSquareBoxId;
 }
-
 function eventListener() {
   for (let i = 0; i < imageBox.length; i++) {
     squareIndicator[i].addEventListener("mouseover", getFocus);

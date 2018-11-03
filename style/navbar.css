@@ -6,7 +6,7 @@
   left: 0;
   top: 0;
   width: 100%;
-  z-index:2;
+  z-index: 2;
 }
 
 .section-nav-top__logo {
@@ -87,16 +87,13 @@
   .section-nav-top__flex-wrapper {
     flex-direction: column;
   }
-
   /* .section__hero {
     margin-top: 310px;
   } */
-
   .section-nav-top {
     flex-direction: column;
-    z-index:2;
+    z-index: 2;
   }
-
   .section-nav-top__toggle {
     display: flex;
     flex-direction: column;
@@ -104,49 +101,47 @@
     align-content: center;
     background-color: #e17055;
   }
-
   .section-nav-top__flex-wrapper--collapsed {
     max-height: 0 !important;
   }
-
   .section-nav-top__item:last-child {
     padding-bottom: 5px;
   }
 }
 
 .active {
-  background-color:#f39277;
+  background-color: #f39277;
 }
 
-@media only screen and (min-width: 992px ) {
+@media only screen and (min-width: 992px) {
   #section-hero__marker {
-    position:absolute;
-    width:1px;
-    height:1px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
     top: 0px;
   }
   #section-function__marker {
-    position:absolute;
-    width:1px;
-    height:1px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
     top: 640px;
   }
   #section-info-products__marker {
-    position:absolute;
-    width:1px;
-    height:1px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
     top: 880px;
   }
   #section-info-team__marker {
-    position:absolute;
-    width:1px;
-    height:1px;
-    top:3155px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 3155px;
   }
   #section-registration-premiere__marker {
-    position:absolute;
-    width:1px;
-    height:1px;
-    top:3538px;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 3538px;
   }
 }
