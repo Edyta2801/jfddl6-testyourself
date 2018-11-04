@@ -1,5 +1,5 @@
 .section-hero {
-  margin-top: 40px ;
+  margin-top: 45px ;
   display: flex;
   width: 100%;
   height: 80vh;
@@ -19,7 +19,7 @@
   padding: 20px;
   color: #1e272e;
   text-align: center;
-  font-weight: bold; 
+  font-weight: bold;
   z-index:1;
 }
 .section-hero__header {
@@ -49,8 +49,6 @@
 .section-hero__nav-box{
   text-align:center;
 }
-
-
 .section-hero__slide-indicator {
   display: inline-block;
   height: 15px;
@@ -58,5 +56,29 @@
   margin: 0 2px;
   background-color: grey;
   opacity:0.5;
-  box-sizing:border-box;  
+  box-sizing:border-box;
+}
+
+@media only screen and (max-width:568px){
+  .section-hero{
+    margin-top:70px;
+  }
+}
+
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.3} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.3} 
+  to {opacity: 1}
 }
