@@ -41,12 +41,12 @@ document.addEventListener('scroll', () => {
             element.setInActive();
         })
         navItems[3].setActive();
-    } else if (window.scrollY + 2 * navbarHeight > navItems[2].sectionEl.offsetTop) {
+    } else if (window.scrollY + 2.5 * navbarHeight > navItems[2].sectionEl.offsetTop) {
         navItems.forEach((element) => {
             element.setInActive();
         })
         navItems[2].setActive();
-    } else if (window.scrollY + 6 * navbarHeight > navItems[1].sectionEl.offsetTop) {
+    } else if (window.scrollY + 4 * navbarHeight > navItems[1].sectionEl.offsetTop) {
         navItems.forEach((element) => {
             element.setInActive();
         })
