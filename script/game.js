@@ -2,7 +2,7 @@ class Card {
     constructor(text) {
         this.visible = false
         this.completed = false
-        // this.image = //jakiś adres do pliku z obrazkiem
+        this.image = null //jakiś adres do pliku z obrazkiem
         this.Id = null //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
@@ -18,6 +18,10 @@ class Card {
 
     setId(id) {
         this.Id = id
+    }
+
+    setImageUrl(url) {
+        this.image = url
     }
 
 }
