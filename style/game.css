@@ -1,16 +1,41 @@
 .gameboard{
     display:flex;
+    flex-direction:column;
     margin:auto;
-    width:400px;
-    height:400px;
-    background-color: lightgrey
+    padding:10px;
+    width:auto;
+    height:100%;
+    background-color: lightgrey;
+    border:1px solid black;
 
 }
-
-.card{
+.boardRow{
     margin:auto;
-    width:70px;
-    height:70px;
-    background-color:lightblue;
+    display:flex;
+    width:auto;
+    padding:5px;
+    height:auto;
+    background-color:grey;
     border:1px solid black;
+}
+.card--covered{
+    margin:auto;
+    width:80px;
+    height:80px;
+    border:1px solid black;
+    background-color:red;
+}
+.card--visible{
+    margin:auto;
+    width:80px;
+    height:80px;
+    border:1px solid black;
+    background-color: green;
+}
+.card--completed{
+    margin:auto;
+    width:80px;
+    height:80px;
+    border:1px solid black;
+    background-color:orange; 
 }
