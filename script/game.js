@@ -2,10 +2,28 @@ class Card {
     constructor(text) {
         this.visible = false
         this.completed = false
-        this.value = text
-        // this.image = jakiś adres do pliku z obrazkiem
-        //this.Id = null przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
+        this.image = null //jakiś adres do pliku z obrazkiem
+        this.Id = null //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
+
+    toggleVisible() {
+        if (this.visible === false) this.visible = true
+        if (this.visible === true) this.visible = false
+    }
+
+    toggleCompleted() {
+        if (this.completed === false) this.completed = true
+        if (this.completed === true) this.completed = false
+    }
+
+    setId(id) {
+        this.Id = id
+    }
+
+    setImageUrl(url) {
+        this.image = url
+    }
+
 }
 
 class Game {
