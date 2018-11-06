@@ -10,7 +10,7 @@ class Card {
 
 class Game {
     constructor() {
-        this.arrayOfCards = [new Card(A), new Card(B), new Card(A), new Card(B)] //array w której będą obiekty typu Card
+        this.arrayOfCards = [new Card('A'), new Card('B'), new Card('A'), new Card('B')] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
         this.moveCounter = 0
         this.timer = null
@@ -25,6 +25,20 @@ class Game {
     }
 
     render() {
+
+        document.body.innerHTML=""
+        const gameBoard=document.createElement('div')
+        gameBoard.classList.add('gameboard')
+        document.body.appendChild(gameBoard)
+        
+        for (let i = 0; i < this.arrayOfCards.length; i++) {
+        let singleCard=document.createElement('div')
+        console.log(singleCard)
+        singleCard.classList.add('card')
+        gameBoard.appendChild(singleCard)
+
+        }
+
 
     }
 
@@ -48,3 +62,6 @@ class Game {
     // robimy taką funkcję ?
     // }
 }
+
+const game1=new Game()
+game1.render()
