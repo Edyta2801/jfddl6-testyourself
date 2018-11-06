@@ -1,26 +1,19 @@
 class Card {
-    constructor() {
+    constructor(text) {
         this.visible = false
         this.completed = false
+        this.value = text
         // this.image = jakiś adres do pliku z obrazkiem
         //this.Id = null przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
-    }
-
-    isVisible() {
-        return this.visible
-    }
-
-    isCompleted() {
-        return this.completed
     }
 }
 
 class Game {
     constructor() {
-        // this.arrayOfCards = [] //array w której będą obiekty typu Card
+        this.arrayOfCards = [new Card(A), new Card(B), new Card(A), new Card(B)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        //this.moveCounter
-        //this.timer
+        this.moveCounter = 0
+        this.timer = null
     }
 
     init() {
