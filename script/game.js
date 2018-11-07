@@ -59,7 +59,7 @@ class Game {
         //create board depending on board dimension/level
         //rows (as many as dimension)
         let cardIndex = 0;
-      
+
         while (cardIndex < this.arrayOfCards.length) {
             for (let r = 0; r < this.boardDimension; r++) {
                 let row = document.createElement('div')
@@ -68,20 +68,22 @@ class Game {
                 //single cards(as many as dimension) in rows
                 for (let i = 0; i < this.boardDimension; i++) {
                     let singleCard = document.createElement('div')
-                //is card completed?
-                    if (this.arrayOfCards[cardIndex].completed==true) {
-                        if(singleCard.classList.contains('card--visible')){
-                            singleCard.classList.remove('card--visible')}
+                    //is card completed?
+                    if (this.arrayOfCards[cardIndex].completed == true) {
+                        if (singleCard.classList.contains('card--visible')) {
+                            singleCard.classList.remove('card--visible')
+                        }
                         singleCard.classList.add('card--completed')
-                            //is card visible?
-                    }else if (this.arrayOfCards[cardIndex].visible==true) {
-                        if(singleCard.classList.contains('card--covered')){
-                            singleCard.classList.remove('card--covered')}
+                        //is card visible?
+                    } else if (this.arrayOfCards[cardIndex].visible == true) {
+                        if (singleCard.classList.contains('card--covered')) {
+                            singleCard.classList.remove('card--covered')
+                        }
                         /* singleCard.classList.remove('card--completed')//testing only*/
                         singleCard.classList.add('card--visible')
-                            //set card covered
-                    }else singleCard.classList.add('card--covered')
-                    
+                        //set card covered
+                    } else singleCard.classList.add('card--covered')
+
                     singleCard.setAttribute('id', this.cardId)
                     row.appendChild(singleCard)
                     this.cardId++
