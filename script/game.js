@@ -1,9 +1,9 @@
 class Card {
-    constructor(text) {
+    constructor(id) {
         this.visible = true
         this.completed = false
         this.image = null //jakiś adres do pliku z obrazkiem
-        this.id = id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
+        this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
     toggleVisible() {
@@ -29,18 +29,20 @@ class Card {
 
 class Game {
     constructor() {
-        this.arrayOfCards = [new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
+        this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 4//2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
         this.shuffledArrayOfCards=[]
+
+        this.init()
     }
     
 
     init() {
-
+        this.generateArrayOfCards()
     }
 
     startGame() {
@@ -111,7 +113,21 @@ class Game {
     }
 
     generateArrayOfCards() {
-        // miało być generateBoard, ale po przemyśleniu wydaje mi się, że jednak lepiej po prostu array, jak coś to można zmienić
+        let fullDim = (this.boardDimension * this.boardDimension) / 2
+
+        for (let i = 0; i < fullDim; i++) {
+            this.arrayOfCards[i] = new Card()
+            // tutaj linia dodająca url do każdej karty
+        }
+
+        const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
+
+
+        this.arrayOfCards = this.arrayOfCards.concat(tempArr)
+
+        this.arrayOfCards.forEach((element, i) => {
+            element.setId(i+1)
+        })
     }
 
 
