@@ -29,7 +29,8 @@ class Card {
 
 class Game {
     constructor() {
-        this.arrayOfCards = [new Card('A'), new Card('B'), new Card('A'), new Card('B'),new Card('C')] //array w której będą obiekty typu Card
+
+        this.arrayOfCards = [new Card('A'), new Card('B'), new Card('A'), new Card('B')] //array w której będą obiekty typu Card
         //Add more cards to have more on the board
 
 
@@ -87,7 +88,6 @@ class Game {
                     cardIndex++
                 }
             }
-            
         }
     }
 
