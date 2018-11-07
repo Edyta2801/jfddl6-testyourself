@@ -39,8 +39,9 @@ class Game {
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
-
+        this.shuffledArrayOfCards=[]
     }
+    
 
     init() {
 
@@ -59,6 +60,16 @@ class Game {
         //create board depending on board dimension/level
         //rows (as many as dimension)
         let cardIndex = 0;
+
+        /*for testing only
+        this.arrayOfCards[0].id=5;
+        this.arrayOfCards[1].id=4;
+        this.arrayOfCards[2].id=3;
+        this.arrayOfCards[3].id=2;
+        this.shuffledArrayOfCards=this.shuffleDecksInArray(this.arrayOfCards)
+        console.log(this.shuffledArrayOfCards)
+        */
+
 
         while (cardIndex < this.arrayOfCards.length) {
             for (let r = 0; r < this.boardDimension; r++) {
@@ -99,15 +110,34 @@ class Game {
 
     clickCard() {
 
+        
+
     }
 
     generateArrayOfCards() {
         // miało być generateBoard, ale po przemyśleniu wydaje mi się, że jednak lepiej po prostu array, jak coś to można zmienić
     }
 
-    shuffleDecksInArray() {
+
+
+    shuffleDecksInArray(array) {
+            let inputArray = array
+
+            for (let i = inputArray.length - 1; i >= 0; i--) {
+
+                let randomIndex = Math.floor(Math.random() * (i + 1));
+                let itemAtIndex = inputArray[randomIndex];
+
+                inputArray[randomIndex] = inputArray[i];
+                inputArray[i] = itemAtIndex;
+            }
+            return inputArray
+
 
     }
+
+
+
 
     setGameLevel(level) {//levels 2/4/6/8/10max
         this.boardDimension = level
@@ -120,3 +150,4 @@ class Game {
 
 const game1 = new Game()
 game1.render()
+
