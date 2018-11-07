@@ -1,9 +1,9 @@
 class Card {
-    constructor(text) {
+    constructor(id) {
         this.visible = false
         this.completed = false
         this.image = null //jakiś adres do pliku z obrazkiem
-        this.Id = null //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
+        this.id = id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
     toggleVisible() {
@@ -28,7 +28,7 @@ class Card {
 
 class Game {
     constructor() {
-        this.arrayOfCards = [new Card('A'), new Card('B'), new Card('A'), new Card('B')] //array w której będą obiekty typu Card
+        this.arrayOfCards = [new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
         this.moveCounter = 0
         this.timer = null
