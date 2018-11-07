@@ -35,14 +35,17 @@ class Game {
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
-        this.shuffledArrayOfCards=[]
 
         this.init()
     }
-    
+
 
     init() {
         this.generateArrayOfCards()
+        this.shuffleDecksInArray()
+        console.log(this.arrayOfCards)
+        this.shuffleDecksInArray()
+        console.log(this.arrayOfCards)
     }
 
     startGame() {
@@ -108,7 +111,7 @@ class Game {
 
     clickCard() {
 
-        
+
 
     }
 
@@ -126,25 +129,26 @@ class Game {
         this.arrayOfCards = this.arrayOfCards.concat(tempArr)
 
         this.arrayOfCards.forEach((element, i) => {
-            element.setId(i+1)
+            element.setId(i + 1)
         })
     }
 
 
 
-    shuffleDecksInArray(array) {
-            let inputArray = array
+    shuffleDecksInArray() {
 
-            for (let i = inputArray.length - 1; i >= 0; i--) {
+        let inputArray = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
 
-                let randomIndex = Math.floor(Math.random() * (i + 1));
-                let itemAtIndex = inputArray[randomIndex];
+        for (let i = inputArray.length - 1; i >= 0; i--) {
 
-                inputArray[randomIndex] = inputArray[i];
-                inputArray[i] = itemAtIndex;
-            }
-            return inputArray
+            let randomIndex = Math.floor(Math.random() * (i + 1));
+            let itemAtIndex = inputArray[randomIndex];
 
+            inputArray[randomIndex] = inputArray[i];
+            inputArray[i] = itemAtIndex;
+        }
+
+        this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
 
     }
 
