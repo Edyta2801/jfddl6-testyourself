@@ -1,6 +1,6 @@
 class Card {
     constructor(id) {
-        this.visible = true
+        this.visible = false
         this.completed = false
         this.image = null //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
@@ -17,7 +17,7 @@ class Card {
     }
 
     setId(id) {
-        this.Id = id
+        this.id = id
     }
 
     setImageUrl(url) {
@@ -42,10 +42,12 @@ class Game {
 
     init() {
         this.generateArrayOfCards()
+        console.log('generated',this.arrayOfCards)
+
         this.shuffleDecksInArray()
-        console.log(this.arrayOfCards)
-        this.shuffleDecksInArray()
-        console.log(this.arrayOfCards)
+        console.log('shuffled',this.arrayOfCards)
+        // this.shuffleDecksInArray()
+        // console.log(this.arrayOfCards)
     }
 
     startGame() {
@@ -80,6 +82,7 @@ class Game {
                 //single cards(as many as dimension) in rows
                 for (let i = 0; i < this.boardDimension; i++) {
                     let singleCard = document.createElement('div')
+                    
                     //is card completed?
                     if (this.arrayOfCards[cardIndex].completed == true) {
                         if (singleCard.classList.contains('card--visible')) {
@@ -95,10 +98,11 @@ class Game {
                         singleCard.classList.add('card--visible')
                         //set card covered
                     } else singleCard.classList.add('card--covered')
-
+                    //set id for each cell same as card id
+                    this.cardId=this.arrayOfCards[cardIndex].id
                     singleCard.setAttribute('id', this.cardId)
                     row.appendChild(singleCard)
-                    this.cardId++
+                    // this.cardId++
                     cardIndex++
                 }
             }
@@ -120,6 +124,7 @@ class Game {
 
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
+            
             // tutaj linia dodająca url do każdej karty
         }
 
@@ -128,9 +133,17 @@ class Game {
 
         this.arrayOfCards = this.arrayOfCards.concat(tempArr)
 
-        this.arrayOfCards.forEach((element, i) => {
-            element.setId(i + 1)
-        })
+        // this.arrayOfCards.forEach((element, i) => {   //oryginalne karola
+        //     element.setId(i + 1)
+        // })
+        
+        for (let i = 0; i < this.arrayOfCards.length/2; i++) {
+            this.arrayOfCards[i].setId('a'+i)   
+        }
+        let k=0
+        for ( let i = (this.arrayOfCards.length)/2; i < this.arrayOfCards.length; i++,k++) {
+            this.arrayOfCards[i].setId('b'+k)   
+        }   
     }
 
 
