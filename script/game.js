@@ -24,7 +24,6 @@ class Card {
         this.image = url
     }
 
-
 }
 
 class Game {
@@ -63,9 +62,9 @@ class Game {
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
             singleCard.classList.add(card.id)
-            singleCard.style.flexBasis = 100/this.boardDimension + '%'
+            singleCard.style.flexBasis = 100 / this.boardDimension + '%'
             // @TODO click card funcntion
-            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i])) 
+            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i]))
 
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
@@ -78,8 +77,7 @@ class Game {
             gameBoard.appendChild(singleCard)
         })
 
-        
-        
+
         document.body.appendChild(gameBoard)
 
         window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
@@ -95,8 +93,7 @@ class Game {
 
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
-
-            // tutaj linia dodająca url do każdej karty
+            this.arrayOfCards[i].image = `./images/gameCards/${i}.svg`
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
@@ -135,7 +132,7 @@ class Game {
         this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
 
     }
-    attachEvent(){
+    attachEvent() {
 
     }
 
