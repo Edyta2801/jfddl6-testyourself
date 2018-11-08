@@ -1,8 +1,8 @@
 class Card {
     constructor(id) {
-        this.visible = false
+        this.visible = true
         this.completed = false
-        this.image = null //jakiś adres do pliku z obrazkiem
+        this.image ='' //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
@@ -64,8 +64,8 @@ class Game {
             singleCard.classList.add('card')
             singleCard.classList.add(card.id)
             singleCard.style.flexBasis = 100/this.boardDimension + '%'
-            // @TODO click card funcntion
-            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i])) 
+            // @TODO click card function
+            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i]))
 
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
@@ -73,13 +73,15 @@ class Game {
 
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
+                singleCard.style.backgroundImage=`url(${image})`
+               
             }
 
             gameBoard.appendChild(singleCard)
         })
 
-        
-        
+
+
         document.body.appendChild(gameBoard)
 
         window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
@@ -96,17 +98,12 @@ class Game {
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
 
-            // tutaj linia dodająca url do każdej karty
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
 
 
         this.arrayOfCards = this.arrayOfCards.concat(tempArr)
-
-        // this.arrayOfCards.forEach((element, i) => {   //oryginalne karola
-        //     element.setId(i + 1)
-        // })
 
         for (let i = 0; i < this.arrayOfCards.length / 2; i++) {
             this.arrayOfCards[i].setId('a' + i)
