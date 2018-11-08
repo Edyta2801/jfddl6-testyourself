@@ -1,0 +1,16 @@
+.section-prices-calc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-prices-calc__row {
+    display: flex;
+    align-items: center;
+}
+
+.section-prices-calc__row-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./style/team-info.css" type="text/css">
     <link rel="stylesheet" href="./style/product-functions.css" type="text/css">
     <link rel="stylesheet" href="./style/cookies.css" type="text/css">
+    <link rel="stylesheet" href="./style/prices-calc.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -200,6 +201,28 @@
                 </div>
             </div>
         </section>
+
+        <section id="section-prices" class="section-prices-calc">
+            <div class="section-prices-calc__header-row">
+                <h2>Sprawdź nasze ceny</h2>
+            </div>
+            <div class="section-prices-calc__row">
+                <label for="non-commercial">Użytkownik niekomercyjny</label>
+                <input type="checkbox" name="non-commercial" value="non-commercial" checked></div>
+            <div class="section-prices-calc__row">
+                <label for="commercial">Użytkownik komercyjny</label>
+                <input type="checkbox" name="commercial" value="commercial" unchecked></div>
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__row-column">
+                    <label for="price-slider">Użytkownicy</label>
+                    <input type="range" min="1" max="100" value="5" class="slider" id="price-slider">
+                </div>
+            </div>
+            <div class="section-prices-calc__price-row">
+                Cena końcowa:
+            </div>
+        </section>
+
         <section id="section-registration-premiere" class="section-registration-premiere">
             <div id="section-registration-premiere__marker"></div>
             <h3 class="section-registration-premiere__header-container">Jesteś zainteresowany?</h3>
@@ -219,13 +242,14 @@
                 <input class="button section-registration-premiere__form-container-button-register" type="submit" value="Wyślij">
             </form>
         </section>
-        <section id="section-incentive" class="section section__incentive"></section>
         <section id="cookies" class="cookies">
             <p>
                 <h4 class="cookies__headline">This site uses cookies</h4>
                 <p class="cookies__content">
-                    If you agree to save the information contained in cookies, click on the "Accept" button in the bottom
-                    right corner of this information. If you do not agree, the cookie settings can be changed in your browser.
+                    If you agree to save the information contained in cookies, click on the "Accept" button in the
+                    bottom
+                    right corner of this information. If you do not agree, the cookie settings can be changed in your
+                    browser.
                 </p>
                 <button id="cookies__button" class="cookies__button">Accept</button>
             </p>
