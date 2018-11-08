@@ -63,9 +63,9 @@ class Game {
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
             singleCard.classList.add(card.id)
-            singleCard.style.flexBasis = 100/this.boardDimension + '%'
+            singleCard.style.flexBasis = 100 / this.boardDimension + '%'
             // @TODO click card funcntion
-            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i])) 
+            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i]))
 
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
@@ -78,17 +78,38 @@ class Game {
             gameBoard.appendChild(singleCard)
         })
 
-        
-        
+
+
         document.body.appendChild(gameBoard)
 
         window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
         gameBoard.style.height = gameBoard.offsetWidth + 'px'
     }
 
-    clickCard() {
+    // clickCard() {
+    // }
 
-    }
+    cardOpen() {
+        arrayOfCards.filter(element, index, array);
+    //     let len = arrayOfCards.length;
+    //     if (len == 2) {
+    //         if (arrayOfCards[0].type === arryOfCards[1].type) {
+    //             console.log("matched")// matched();
+    //         }
+    //         else {
+    //             console.log("unmatched")// unmatched();
+    //         }
+
+    //     }
+    // }
+    // matched(){
+    //     arrayOfCards[0].classList.add("match", "disabled")
+    //     arrayOfCards[1].classList.add("match", "disabled");
+    //     arrayOfCards[0].classList.remove("show", "open", "no-event");
+    //     arrayOfCards[1].classList.remove("show", "open", "no-event");
+    //     arrayOfCards = [];
+    // }
+    
 
     generateArrayOfCards() {
         let fullDim = (this.boardDimension * this.boardDimension) / 2
@@ -135,7 +156,7 @@ class Game {
         this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
 
     }
-    attachEvent(){
+    attachEvent() {
 
     }
 
