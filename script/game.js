@@ -30,7 +30,7 @@ class Game {
     constructor() {
         this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
@@ -61,24 +61,20 @@ class Game {
         this.arrayOfCards.forEach((card, i) => {
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
-            singleCard.classList.add(card.id)
+            // singleCard.classList.add(card.id)
             singleCard.style.flexBasis = 100 / this.boardDimension + '%'
             // @TODO click card funcntion
-          
-            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i]))
+        
+            singleCard.addEventListener('click',this.clickCard() )//() => console.log(i, this.arrayOfCards[i])
 
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
             }
-
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
 
                 singleCard.style.backgroundImage=`url("${card.image}")`
-
-
             }
-
             gameBoard.appendChild(singleCard)
         })
 
@@ -90,7 +86,7 @@ class Game {
     }
 
     clickCard() {
-
+    
     }
 
     generateArrayOfCards() {
@@ -106,13 +102,13 @@ class Game {
 
         this.arrayOfCards = this.arrayOfCards.concat(tempArr)
 
-        for (let i = 0; i < this.arrayOfCards.length / 2; i++) {
-            this.arrayOfCards[i].setId('a' + i)
-        }
-        let k = 0
-        for (let i = (this.arrayOfCards.length) / 2; i < this.arrayOfCards.length; i++ , k++) {
-            this.arrayOfCards[i].setId('b' + k)
-        }
+        // for (let i = 0; i < this.arrayOfCards.length / 2; i++) {
+        //     this.arrayOfCards[i].setId('a' + i)
+        // }
+        // let k = 0
+        // for (let i = (this.arrayOfCards.length) / 2; i < this.arrayOfCards.length; i++ , k++) {
+        //     this.arrayOfCards[i].setId('b' + k)
+        // }
     }
 
 

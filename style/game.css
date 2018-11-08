@@ -26,7 +26,8 @@ body, html {
 
 .card--visible{
     margin:auto;
-    box-sizing: border-box;
+   
+
     padding:10px;
     width:80px;
     height:80px;
@@ -35,11 +36,12 @@ body, html {
     background-repeat:no-repeat;
     background-size:100% 100%;
 
+
     
 }
 .card--completed{
     margin:auto;
-    box-sizing: border-box;
+   
     padding:10px;
     width:80px;
     height:80px;
