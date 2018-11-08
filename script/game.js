@@ -93,7 +93,7 @@ class Game {
 
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
-            this.arrayOfCards[i].image = `./images/gameCards/${i}.svg`
+            this.arrayOfCards[i].image = `./images/gameCards/${i+1}.svg`
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
