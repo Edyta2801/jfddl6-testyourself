@@ -1,7 +1,7 @@
 class Card {
     constructor(id) {
         this.visible = true
-        this.completed = false
+        this.completed = true
         this.image = null //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
@@ -46,8 +46,7 @@ class Game {
 
         this.shuffleDecksInArray()
         console.log('shuffled', this.arrayOfCards)
-        // this.shuffleDecksInArray()
-        // console.log(this.arrayOfCards)
+        
     }
 
     startGame() {
@@ -63,16 +62,6 @@ class Game {
         //create board depending on board dimension/level
         //rows (as many as dimension)
         let cardIndex = 0;
-
-        /*for testing only
-        this.arrayOfCards[0].id=5;
-        this.arrayOfCards[1].id=4;
-        this.arrayOfCards[2].id=3;
-        this.arrayOfCards[3].id=2;
-        this.shuffledArrayOfCards=this.shuffleDecksInArray(this.arrayOfCards)
-        console.log(this.shuffledArrayOfCards)
-        */
-
 
         while (cardIndex < this.arrayOfCards.length) {
             for (let r = 0; r < this.boardDimension; r++) {
@@ -112,13 +101,7 @@ class Game {
         }
     }
 
-
-
-
-
     clickCard() {
-
-
 
     }
 
