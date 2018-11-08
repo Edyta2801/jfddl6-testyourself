@@ -24,14 +24,13 @@ class Card {
         this.image = url
     }
 
-
 }
 
 class Game {
     constructor() {
         this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 6// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
@@ -63,8 +62,9 @@ class Game {
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
             singleCard.classList.add(card.id)
-            singleCard.style.flexBasis = 100/this.boardDimension + '%'
-            // @TODO click card function
+            singleCard.style.flexBasis = 100 / this.boardDimension + '%'
+            // @TODO click card funcntion
+          
             singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i]))
 
             if (card.completed === true) {
@@ -73,13 +73,14 @@ class Game {
 
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
-                singleCard.style.backgroundImage=`url(${image})`
-               
+                // console.log('singleCard',singleCard,'card.image',card.image)
+                singleCard.style.backgroundImage=`url("${card.image}")`
+                console.log("po dodaniu",singleCard)
+
             }
 
             gameBoard.appendChild(singleCard)
         })
-
 
 
         document.body.appendChild(gameBoard)
@@ -98,6 +99,7 @@ class Game {
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
 
+            this.arrayOfCards[i].image = `./images/gameCards/${i}.svg`
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
@@ -132,7 +134,7 @@ class Game {
         this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
 
     }
-    attachEvent(){
+    attachEvent() {
 
     }
 
