@@ -1,7 +1,7 @@
 class Card {
     constructor(id) {
-        this.visible = true
-        this.completed = true
+        this.visible = false
+        this.completed = false
         this.image = null //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
@@ -31,7 +31,7 @@ class Game {
     constructor() {
         this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 6// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
@@ -46,7 +46,7 @@ class Game {
 
         this.shuffleDecksInArray()
         console.log('shuffled', this.arrayOfCards)
-        
+
     }
 
     startGame() {
@@ -54,51 +54,36 @@ class Game {
     }
 
     render() {
-        //create gameboard container
         document.body.innerHTML = ""
+
         const gameBoard = document.createElement('div')
         gameBoard.classList.add('gameboard')
-        document.body.appendChild(gameBoard)
-        //create board depending on board dimension/level
-        //rows (as many as dimension)
-        let cardIndex = 0;
 
-        while (cardIndex < this.arrayOfCards.length) {
-            for (let r = 0; r < this.boardDimension; r++) {
-                let row = document.createElement('div')
-                row.classList.add('boardRow')
-                gameBoard.appendChild(row)
-                //single cards(as many as dimension) in rows
-                for (let i = 0; i < this.boardDimension; i++) {
-                    let singleCard = document.createElement('div')
+        this.arrayOfCards.forEach((card, i) => {
+            const singleCard = document.createElement('div')
+            singleCard.classList.add('card')
+            singleCard.classList.add(card.id)
+            singleCard.style.flexBasis = 100/this.boardDimension + '%'
+            // @TODO click card funcntion
+            singleCard.addEventListener('click', () => console.log(i, this.arrayOfCards[i])) 
 
-                    //is card completed?
-                    if (this.arrayOfCards[cardIndex].completed == true) {
-                        if (singleCard.classList.contains('card--visible')) {
-                            singleCard.classList.remove('card--visible')
-                        }
-                        singleCard.classList.add('card--completed')
-                        //is card visible?
-                    } else if (this.arrayOfCards[cardIndex].visible == true) {
-                        if (singleCard.classList.contains('card--covered')) {
-                            singleCard.classList.remove('card--covered')
-                        }
-                        /* singleCard.classList.remove('card--completed')//testing only*/
-                        singleCard.classList.add('card--visible')
-                        //set card covered
-                    } else {
-                        singleCard.style.content = 'url()';
-                        singleCard.classList.add('card--covered')
-                    }
-                    //set id for each cell same as card id
-                    this.cardId = this.arrayOfCards[cardIndex].id
-                    singleCard.setAttribute('id', this.cardId)
-                    row.appendChild(singleCard)
-                    // this.cardId++
-                    cardIndex++
-                }
+            if (card.completed === true) {
+                singleCard.classList.add('card--completed')
             }
-        }
+
+            if (card.visible === true) {
+                singleCard.classList.add('card--visible')
+            }
+
+            gameBoard.appendChild(singleCard)
+        })
+
+        
+        
+        document.body.appendChild(gameBoard)
+
+        window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
+        gameBoard.style.height = gameBoard.offsetWidth + 'px'
     }
 
     clickCard() {
@@ -148,6 +133,9 @@ class Game {
         }
 
         this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
+
+    }
+    attachEvent(){
 
     }
 
