@@ -73,9 +73,9 @@ class Game {
 
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
-                // console.log('singleCard',singleCard,'card.image',card.image)
+
                 singleCard.style.backgroundImage=`url("${card.image}")`
-                console.log("po dodaniu",singleCard)
+
 
             }
 
@@ -98,8 +98,7 @@ class Game {
 
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
-
-            this.arrayOfCards[i].image = `./images/gameCards/${i}.svg`
+            this.arrayOfCards[i].image = `./images/gameCards/${i+1}.svg`
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
