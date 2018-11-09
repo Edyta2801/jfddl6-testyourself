@@ -2,15 +2,13 @@ class Card {
     constructor(id) {
         this.visible = true
         this.completed = false
-        this.image ='' //jakiś adres do pliku z obrazkiem
+        this.image = '' //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
     toggleVisible() {
-        if (this.visible === false) this.visible = true
-        if (this.visible === true) this.visible = false
+       this.visible=!this.visible
     }
-
     toggleCompleted() {
         if (this.completed === false) this.completed = true
         if (this.completed === true) this.completed = false
@@ -64,8 +62,12 @@ class Game {
             // singleCard.classList.add(card.id)
             singleCard.style.flexBasis = 100 / this.boardDimension + '%'
             // @TODO click card funcntion
-        
-            singleCard.addEventListener('click',this.clickCard() )//() => console.log(i, this.arrayOfCards[i])
+
+            singleCard.addEventListener('click', () => {
+                this.arrayOfCards[i].toggleVisible()
+
+                this.render()
+            })//() => console.log(i, this.arrayOfCards[i])
 
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
@@ -73,7 +75,7 @@ class Game {
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
 
-                singleCard.style.backgroundImage=`url("${card.image}")`
+                singleCard.style.backgroundImage = `url("${card.image}")`
             }
             gameBoard.appendChild(singleCard)
         })
@@ -86,7 +88,7 @@ class Game {
     }
 
     clickCard() {
-    
+
     }
 
     generateArrayOfCards() {
@@ -94,7 +96,7 @@ class Game {
 
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card()
-            this.arrayOfCards[i].image = `./images/gameCards/${i+1}.svg`
+            this.arrayOfCards[i].image = `./images/gameCards/${i + 1}.svg`
         }
 
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
