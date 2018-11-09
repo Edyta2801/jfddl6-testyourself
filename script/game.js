@@ -9,9 +9,8 @@ class Card {
     toggleVisible() {
        this.visible=!this.visible
     }
-    toggleCompleted() {
-        if (this.completed === false) this.completed = true
-        if (this.completed === true) this.completed = false
+    markCompleted() {
+        this.completed === true
     }
 
     setId(id) {
