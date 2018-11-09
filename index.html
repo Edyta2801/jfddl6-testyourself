@@ -203,23 +203,31 @@
         </section>
 
         <section id="section-prices" class="section-prices-calc">
-            <div class="section-prices-calc__header-row">
+            <div class="section-prices-calc__row">
                 <h2>Sprawdź nasze ceny</h2>
             </div>
+
             <div class="section-prices-calc__row">
-                <label for="non-commercial">Użytkownik niekomercyjny</label>
-                <input type="checkbox" name="non-commercial" value="non-commercial" checked></div>
-            <div class="section-prices-calc__row">
-                <label for="commercial">Użytkownik komercyjny</label>
-                <input type="checkbox" name="commercial" value="commercial" unchecked></div>
-            <div class="section-prices-calc__row">
-                <div class="section-prices-calc__row-column">
-                    <label for="price-slider">Użytkownicy</label>
-                    <input type="range" min="1" max="100" value="5" class="slider" id="price-slider">
-                </div>
+                <div class="section-prices-calc__price-label">Użytkownik niekomercyjny</div>
+                <input type="checkbox" id="non-commercial" value="non-commercial" checked>
             </div>
-            <div class="section-prices-calc__price-row">
-                Cena końcowa:
+
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__price-label">Użytkownik komercyjny</div>
+                <input type="checkbox" id="commercial" value="commercial" unchecked>
+            </div>
+
+            <div class="section-prices-calc__row">
+                <!-- <div class="section-prices-calc__column"> -->
+                <div class="section-prices-calc__price-label">Użytkownicy:</div>
+                <input type="range" min="1" max="100" value="5" class="slider" id="price-slider">
+                <!-- </div> -->
+                <div class="section-prices-calc__users-output"></div>
+            </div>
+
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__price-label">Cena końcowa:</div>
+                <div class="section-prices-calc__price-output"> 0 zł</div>
             </div>
         </section>
 
@@ -261,6 +269,7 @@
     <script src="./script/scroll-spy.js"></script>
     <script src="./script/carousel.js"></script>
     <script src="./script/cookies.js"></script>
+    <script src="./script/prices-calc.js"></script>
 </body>
 
 </html>
