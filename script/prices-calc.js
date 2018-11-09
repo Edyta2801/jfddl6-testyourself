@@ -1,7 +1,7 @@
 const slider = document.querySelector("#price-slider")
 const output = document.querySelector(".section-prices-calc__users-output")
 
-const checkBoxCommercial = document.getElementById("#commercial")
+const checkBoxCommercial = document.querySelector("#commercial")
 const checkBoxNonCommercial = document.querySelector("#non-commercial")
 
 
@@ -12,11 +12,11 @@ slider.oninput = function () {
     output.innerHTML = slider.value
 }
 
-checkBoxCommercial.onclick = function () {
+checkBoxCommercial.onchange = function () {
     checkBoxCommercial.checked = true
     checkBoxNonCommercial.checked = false
 }
-checkBoxNonCommercial.onclick = function () {
+checkBoxNonCommercial.onchange = function () {
     checkBoxCommercial.checked = false
     checkBoxNonCommercial.checked = true
 }
