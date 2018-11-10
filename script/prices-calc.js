@@ -47,6 +47,7 @@ class Price {
     countPrice() {
         if (this.checkBoxNonCommercialValue === true) {
             this.finalPrice = 0
+            this.sliderValue = 1
             this.disableSliderDivElements()
         }
         else {

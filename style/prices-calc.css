@@ -2,11 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
 }
 
 .section-prices-calc__row {
     display: flex;
     justify-content: space-between;
+    padding: 4px;
 }
 
 .section-prices-calc__header {
