@@ -4,6 +4,7 @@ class Card {
         this.completed = false
         this.image = '' //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
+
     }
 
     toggleVisible() {
@@ -27,7 +28,7 @@ class Game {
     constructor() {
         this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
@@ -62,6 +63,7 @@ class Game {
 
             singleCard.addEventListener('click', () => {
                 this.clickCard(i)
+                // this.arrayOfCards[i].toggleVisible()
             })
 
             if (card.completed === true) {
@@ -81,6 +83,9 @@ class Game {
         window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
         gameBoard.style.height = gameBoard.offsetWidth + 'px'
     }
+
+
+
 
     clickCard(i) {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
@@ -104,16 +109,16 @@ class Game {
         this.checkIfAllCompletedThenWin()
     }
 
-    toggleVisible(i){
+    toggleVisible(i) {
         this.arrayOfCards[i].toggleVisible()
         this.render()
     }
 
-    checkIfVisibleCardMatchedThenCompleteThem(){
+    checkIfVisibleCardMatchedThenCompleteThem() {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
 
-        if(visibleCards[0].image === visibleCards[1].image){
+        if (visibleCards[0].image === visibleCards[1].image) {
             visibleCards[0].completed = true
             visibleCards[1].completed = true
         }
@@ -121,22 +126,22 @@ class Game {
         this.render()
     }
 
-    hideAllVisibleCards(){
+    hideAllVisibleCards() {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
 
         visibleCards.map(card => card.visible = false)
     }
 
-    checkIfAllCompletedThenWin(){
+    checkIfAllCompletedThenWin() {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
 
-        if(uncompletedCards.length === 0){
+        if (uncompletedCards.length === 0) {
             this.win()
         }
     }
 
-    win(){
+    win() {
         console.log('YOU WON!')
     }
 
@@ -198,4 +203,5 @@ class Game {
 
 const game1 = new Game()
 game1.render()
+
 
