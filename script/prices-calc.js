@@ -15,7 +15,7 @@ class Price {
 
     init() {
 
-        this.slider = document.querySelector("#price-slider")
+        this.slider = document.querySelector(".section-prices-calc_price-slider")
         this.usersOutput = document.querySelector(".section-prices-calc__users-output")
         this.priceOutput = document.querySelector(".section-prices-calc__price-output")
 
@@ -48,11 +48,11 @@ class Price {
         if (this.checkBoxNonCommercialValue === true) {
             this.finalPrice = 0
             this.sliderValue = 1
-            this.disableSliderDivElements()
+            // this.disableSliderDivElements()
         }
         else {
             this.finalPrice = this.oneUserPrice * this.sliderValue
-            this.enableSliderDivElements()
+            // this.enableSliderDivElements()
         }
     }
 
@@ -77,25 +77,27 @@ class Price {
     onSliderInput() {
         this.sliderValue = this.slider.value
 
+        this.onCommercialCheckBoxChange()
+
         this.countPrice()
 
         this.render()
     }
 
-    disableSliderDivElements() {
+    // disableSliderDivElements() {
 
-        for (let i = 0, l = this.allSliderRowElements.length; i < l; ++i) {
-            this.allSliderRowElements[i].readOnly = true;
-            this.allSliderRowElements[i].disabled = true;
-        }
-    }
-    enableSliderDivElements() {
+    //     for (let i = 0, l = this.allSliderRowElements.length; i < l; ++i) {
+    //         this.allSliderRowElements[i].readOnly = true;
+    //         this.allSliderRowElements[i].disabled = true;
+    //     }
+    // }
+    // enableSliderDivElements() {
 
-        for (let i = 0, l = this.allSliderRowElements.length; i < l; ++i) {
-            this.allSliderRowElements[i].readOnly = false;
-            this.allSliderRowElements[i].disabled = false;
-        }
-    }
+    //     for (let i = 0, l = this.allSliderRowElements.length; i < l; ++i) {
+    //         this.allSliderRowElements[i].readOnly = false;
+    //         this.allSliderRowElements[i].disabled = false;
+    //     }
+    // }
 }
 
 const price = new Price()
