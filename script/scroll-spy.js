@@ -62,6 +62,5 @@
             })
             navItems[0].setActive();
         }
-        console.log(window.scrollY)
     });
 })()
