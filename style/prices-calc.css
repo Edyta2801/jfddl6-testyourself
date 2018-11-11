@@ -9,8 +9,9 @@
 
 .section-prices-calc__row {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 6px;
+    padding: 10px;
 }
 
 .section-prices-calc__header {
