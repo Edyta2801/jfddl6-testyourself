@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    font-weight: bold;
 }
 
 .section-prices-calc__row {
@@ -204,7 +206,7 @@
 }
 
 .section-prices-calc__users-output {
-    min-width: 30px;
+    min-width: 40px;
     text-align: right;
 }
 
