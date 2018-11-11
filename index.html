@@ -209,18 +209,26 @@
 
             <div class="section-prices-calc__row">
                 <div class="section-prices-calc__price-label">Użytkownik indywidualny:</div>
-                <input type="checkbox" id="non-commercial" value="non-commercial" checked>
+                <label class="section-prices-calc__checkbox-label">
+                    <input type="checkbox" id="non-commercial" class="section-prices-calc__checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
             </div>
 
             <div class="section-prices-calc__row">
                 <div class="section-prices-calc__price-label">Użytkownik komercyjny:</div>
-                <input type="checkbox" id="commercial" value="commercial" unchecked>
+                <label class="section-prices-calc__checkbox-label">
+                    <input type="checkbox" id="commercial" class="section-prices-calc__checkbox" unchecked>
+                    <span class="checkmark"></span>
+                </label>
             </div>
 
-            <div id="section-prices-calc__slider-div" class="section-prices-calc__row">
+            <div id="section-prices-calc__slider-div" class="section-prices-calc__row section-prices-calc__slider-wrapper">
                 <div class="section-prices-calc__price-label">Użytkownicy:</div>
-                <input type="range" min="1" max="100" value="1" class="section-prices-calc_price-slider" id="section-prices-calc_price-slider">
-                <div class="section-prices-calc__users-output"></div>
+                <div class="section-prices-calc__slider-wrapper">
+                    <input type="range" min="1" max="100" value="1" class="section-prices-calc_price-slider" id="section-prices-calc_price-slider">
+                    <div class="section-prices-calc__users-output"></div>
+                </div>
             </div>
 
             <div class="section-prices-calc__row">

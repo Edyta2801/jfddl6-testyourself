@@ -22,9 +22,6 @@ class Price {
         this.checkBoxCommercial = document.querySelector("#commercial")
         this.checkBoxNonCommercial = document.querySelector("#non-commercial")
 
-        this.sliderRow = document.querySelector('#section-prices-calc__slider-div')
-        this.allSliderRowElements = this.sliderRow.children
-
         this.checkBoxCommercial.onchange = this.onCommercialCheckBoxChange.bind(this)
         this.checkBoxNonCommercial.onchange = this.onNonCommercialCheckBoxChange.bind(this)
 
@@ -48,11 +45,9 @@ class Price {
         if (this.checkBoxNonCommercialValue === true) {
             this.finalPrice = 0
             this.sliderValue = 1
-            // this.disableSliderDivElements()
         }
         else {
             this.finalPrice = this.oneUserPrice * this.sliderValue
-            // this.enableSliderDivElements()
         }
     }
 

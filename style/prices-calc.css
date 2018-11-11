@@ -8,7 +8,7 @@
 .section-prices-calc__row {
     display: flex;
     justify-content: space-between;
-    padding: 4px;
+    padding: 6px;
 }
 
 .section-prices-calc__header {
@@ -16,91 +16,196 @@
     justify-content: center;
 }
 
-.section-prices-calc_price-slider {
-    -webkit-appearance: none;
-    background: transparent;
+/* Hide the browser's default checkbox */
+
+.section-prices-calc__checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.section-prices-calc_price-slider {
-    outline: none;
+.section-prices-calc__checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
 }
 
-.section-prices-calc_price-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    -webkit-appearance: none;
-    border: 1px solid #000000;
-    height: 16px;
-    width: 10px;
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f39277;
     border-radius: 3px;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -14px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 1px solid #000000;
 }
 
-.section-prices-calc_price-slider::-ms-track {
-    width: 100%;
-    cursor: pointer;
-    /* Hides the slider so custom styles can be added */
+/* On mouse-over, add a grey background color */
+
+.section-prices-calc__checkbox-label:hover .section-prices-calc__checkbox~.checkmark {
+    background-color: #fab1a0;
+}
+
+/* When the checkbox is checked, add a blue background */
+
+.section-prices-calc__checkbox-label .section-prices-calc__checkbox:checked~.checkmark {
+    background-color: #e17055;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.section-prices-calc__checkbox-label .section-prices-calc__checkbox:checked~.checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+
+.section-prices-calc__checkbox-label .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.section-prices-calc__checkbox-label {
+    display: flex;
+    align-items: center;
+}
+
+.section-prices-calc__slider-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.section-prices-calc_price-slider {
+    -webkit-appearance: none;
     background: transparent;
-    border-color: transparent;
-    color: transparent;
+    outline: none;
+    -webkit-appearance: none;
+    margin: 7.7px 0;
+}
+
+.section-prices-calc_price-slider:focus {
+    outline: none;
 }
 
 .section-prices-calc_price-slider::-webkit-slider-runnable-track {
     width: 100%;
-    height: 8.4px;
+    height: 12.6px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
+    background: #928483;
+    border-radius: 6.2px;
+    border: 0.7px solid #562425;
+}
+
+.section-prices-calc_price-slider::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 1.4px solid #000000;
+    height: 28px;
+    width: 13px;
+    border-radius: 5px;
+    background: #e17055;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -8.4px;
 }
 
 .section-prices-calc_price-slider:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
+    background: #9e9191;
 }
 
 .section-prices-calc_price-slider::-moz-range-track {
     width: 100%;
-    height: 8.4px;
+    height: 12.6px;
     cursor: pointer;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
+    background: #928483;
+    border-radius: 6.2px;
+    border: 0.7px solid #562425;
+}
+
+.section-prices-calc_price-slider::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 2.2px solid #000000;
+    height: 28px;
+    width: 13px;
+    border-radius: 5px;
+    background: #e17055;
+    cursor: pointer;
 }
 
 .section-prices-calc_price-slider::-ms-track {
     width: 100%;
-    height: 8.4px;
+    height: 12.6px;
     cursor: pointer;
     background: transparent;
     border-color: transparent;
-    border-width: 16px 0;
     color: transparent;
 }
 
 .section-prices-calc_price-slider::-ms-fill-lower {
-    background: #2a6495;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
+    background: #867776;
+    border: 0.7px solid #562425;
+    border-radius: 12.4px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-}
-
-.section-prices-calc_price-slider:focus::-ms-fill-lower {
-    background: #3071a9;
 }
 
 .section-prices-calc_price-slider::-ms-fill-upper {
-    background: #3071a9;
-    border: 0.2px solid #010101;
-    border-radius: 2.6px;
+    background: #928483;
+    border: 0.7px solid #562425;
+    border-radius: 12.4px;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 
+.section-prices-calc_price-slider::-ms-thumb {
+    box-shadow: 1px 1px 1px #050000, 0px 0px 1px #1f0000;
+    border: 2.2px solid #000000;
+    height: 28px;
+    width: 13px;
+    border-radius: 5px;
+    background: #e17055;
+    cursor: pointer;
+    height: 12.6px;
+}
+
+.section-prices-calc_price-slider:focus::-ms-fill-lower {
+    background: #928483;
+}
+
 .section-prices-calc_price-slider:focus::-ms-fill-upper {
-    background: #367ebd;
+    background: #9e9191;
+}
+
+.section-prices-calc__users-output {
+    min-width: 30px;
+    text-align: right;
 }
 
 @media only screen and (min-width: 300px) {
