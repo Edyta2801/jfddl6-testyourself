@@ -28,7 +28,7 @@ class Game {
     constructor() {
         this.arrayOfCards = [] //[new Card(1), new Card(2), new Card(3), new Card(4)] //array w której będą obiekty typu Card
         //this.preDefinedArraySizes
-        this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 4// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
         this.timer = null
         this.cardId = 1 //card/cell id for the gameboard cells/cards
