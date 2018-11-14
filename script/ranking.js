@@ -9,8 +9,7 @@ class Player {
 class Ranking {
     constructor() {
         this.tableHeaderArr = ["Gracz", "Poziom gry", "Ilość ruchów"]
-        this.playersArray = []
-
+        this.playersArray = JSON.parse(window.localStorage.getItem("ranking")) || []
         this.render()
     }
 
@@ -65,7 +64,7 @@ class Ranking {
         this.playersArray = this.playersArray.concat(
             new Player(name, level, score)
         )
-
+        window.localStorage.setItem("ranking", JSON.stringify(this.playersArray))
         this.render()
     }
 
