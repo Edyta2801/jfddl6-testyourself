@@ -28,7 +28,6 @@ class Card {
 }
 
 class Game {
-
     constructor() {
         this.arrayOfCards = []
         //this.preDefinedArraySizes
@@ -39,9 +38,10 @@ class Game {
         this.resetButton = document.querySelector(".button__reset")
         // this.isWon=false
         this.gameLevel = 0
+
+        this.ranking = new Ranking()
         this.init()
     }
-
 
     init() {
         this.generateArrayOfCards()
@@ -98,7 +98,6 @@ class Game {
             this.moveCounter++
         }
 
-        console.log('mc', this.moveCounter)
         if (numberOfVisibleCards === 0) {
             this.makeCardVisible(i)
         }
@@ -153,9 +152,17 @@ class Game {
 
     win() {
         const promptBox = document.querySelector(".prompt-form-container")
+        const promptBoxInput = document.querySelector(".prompt-form__input-text")
+        const promptBoxButton = document.querySelector(".prompt-form__button")
+
         promptBox.style.display = "initial"
-        // this.isWon=true
-        // this.setGameLevel(this.gameLevel+2)
+
+        promptBoxButton.addEventListener(
+            'click',
+            () => {
+                this.ranking.savePlayerName(promptBoxInput.value, this.gameLevel, this.moveCounter)
+            }
+        )
 
         console.log('YOU WON!')
     }
@@ -188,12 +195,9 @@ class Game {
     }
 
     resetGame() {
-        const game = new Game()
-        game.render()
+        window.location = ''
     }
 }
 
 const game = new Game()
 game.render()
-
-
