@@ -5,11 +5,16 @@ class Card {
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
     }
 
-    toggleVisible() {
-        this.visible = !this.visible
+    makeVisible() {
+        this.visible = true
     }
-    toggleCompleted() {
-        this.completed = !this.completed
+
+    makeInvisible() {
+        this.visible = false
+    }
+
+    makeCompleted() {
+        this.completed = true
     }
 
     setId(id) {
@@ -95,25 +100,25 @@ class Game {
 
         console.log('mc', this.moveCounter)
         if (numberOfVisibleCards === 0) {
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
         }
 
         if (numberOfVisibleCards === 1) {
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
             this.checkIfVisibleCardMatchedThenCompleteThem()
         }
 
         if (numberOfVisibleCards === 2) {
             this.hideAllVisibleCards()
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
         }
 
         this.checkIfAllCompletedThenWin()
 
     }
 
-    toggleVisible(i) {
-        this.arrayOfCards[i].toggleVisible()
+    makeCardVisible(i) {
+        this.arrayOfCards[i].makeVisible()
         this.render()
     }
 
@@ -122,10 +127,14 @@ class Game {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
 
-        if (visibleCards[0].id === visibleCards[1].id) {
-            visibleCards[0].completed = true
-            visibleCards[1].completed = true
+        if (
+            visibleCards.length === 2 &&
+            visibleCards[0].id === visibleCards[1].id
+        ) {
+            visibleCards[0].makeCompleted()
+            visibleCards[1].makeCompleted()
         }
+
         this.render()
     }
 
