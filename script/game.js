@@ -25,17 +25,17 @@ class Card {
 }
 
 class Game {
-   
+
     constructor() {
         this.arrayOfCards = []
         //this.preDefinedArraySizes
         this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
-        
+
         this.cardId = 1 //card/cell id for the gameboard cells/cards
-        this.resetButton=document.querySelector(".button__reset")
+        this.resetButton = document.querySelector(".button__reset")
         // this.isWon=false
-        this.gameLevel=0
+        this.gameLevel = 0
         this.init()
     }
 
@@ -46,18 +46,18 @@ class Game {
     }
 
     startGame() {
-        
+
     }
 
     render() {
-        
-        const board=document.querySelector(".section-incentive__game-board")
-        board.innerHTML=''
-        this.resetButton.addEventListener('click',this.resetGame)
+
+        const board = document.querySelector(".section-incentive__game-board")
+        board.innerHTML = ''
+        this.resetButton.addEventListener('click', this.resetGame)
         const gameBoard = document.createElement('div')
         gameBoard.classList.add('gameboard')
-        const moveCounterDiv =document.querySelector(".game-score__counter")
-        moveCounterDiv.innerHTML=this.moveCounter
+        const moveCounterDiv = document.querySelector(".game-score__counter")
+        moveCounterDiv.innerHTML = this.moveCounter
 
         this.arrayOfCards.forEach((card, i) => {
             const singleCard = document.createElement('div')
@@ -91,16 +91,16 @@ class Game {
 
 
     clickCard(i) {
-        
+
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
         const numberOfVisibleCards = visibleCards.length
 
-        if (uncompletedCards.length !=0 && this.arrayOfCards[i].completed!=true) {
+        if (uncompletedCards.length != 0 && this.arrayOfCards[i].completed != true) {
             this.moveCounter++
         }
-        
-        console.log('mc',this.moveCounter)
+
+        console.log('mc', this.moveCounter)
         if (numberOfVisibleCards === 0) {
             this.toggleVisible(i)
         }
@@ -116,7 +116,7 @@ class Game {
         }
 
         this.checkIfAllCompletedThenWin()
-        
+
     }
 
     toggleVisible(i) {
@@ -125,10 +125,10 @@ class Game {
     }
 
     checkIfVisibleCardMatchedThenCompleteThem() {
-        
+
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
-       
+
         if (visibleCards[0].image === visibleCards[1].image) {
             visibleCards[0].completed = true
             visibleCards[1].completed = true
@@ -150,14 +150,14 @@ class Game {
     }
 
     win() {
-        const promptBox=document.querySelector(".prompt-form-container")
-        promptBox.style.display="initial"
+        const promptBox = document.querySelector(".prompt-form-container")
+        promptBox.style.display = "initial"
         // this.isWon=true
         // this.setGameLevel(this.gameLevel+2)
-        
+
         console.log('YOU WON!')
     }
-    
+
     generateArrayOfCards() {
         let fullDim = (this.boardDimension * this.boardDimension) / 2
 
@@ -186,7 +186,7 @@ class Game {
     }
 
     resetGame() {
-        const game= new Game()
+        const game = new Game()
         game.render()
     }
 }
