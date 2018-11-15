@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./style/team-info.css" type="text/css">
     <link rel="stylesheet" href="./style/product-functions.css" type="text/css">
     <link rel="stylesheet" href="./style/cookies.css" type="text/css">
+    <link rel="stylesheet" href="./style/prices-calc.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather" />
     <link rel="stylesheet" href="./style/animation.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
@@ -201,6 +202,38 @@
                 </div>
             </div>
         </section>
+
+        <section id="section-prices" class="section-prices-calc">
+            <div class="section-prices-calc__row section-prices-calc__header">
+                <h2>Sprawdź nasze ceny</h2>
+            </div>
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__price-label">Użytkownik indywidualny:</div>
+                <label class="section-prices-calc__checkbox-label">
+                    <input type="checkbox" id="non-commercial" class="section-prices-calc__checkbox" checked>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__price-label">Użytkownik komercyjny:</div>
+                <label class="section-prices-calc__checkbox-label">
+                    <input type="checkbox" id="commercial" class="section-prices-calc__checkbox" unchecked>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <div id="section-prices-calc__slider-div" class="section-prices-calc__row section-prices-calc__slider-wrapper">
+                <div class="section-prices-calc__price-label">Użytkownicy:</div>
+                <div class="section-prices-calc__slider-wrapper">
+                    <input type="range" min="1" max="100" value="1" class="section-prices-calc_price-slider" id="section-prices-calc_price-slider">
+                    <div class="section-prices-calc__users-output"></div>
+                </div>
+            </div>
+            <div class="section-prices-calc__row">
+                <div class="section-prices-calc__price-label">Cena końcowa:</div>
+                <div class="section-prices-calc__price-output"> 0 zł</div>
+            </div>
+        </section>
+
         <section id="section-registration-premiere" class="section-registration-premiere">
             <div id="section-registration-premiere__marker"></div>
             <h3 class="section-registration-premiere__header-container">Jesteś zainteresowany?</h3>
@@ -220,15 +253,13 @@
                 <input class="button section-registration-premiere__form-container-button-register" type="submit" value="Wyślij">
             </form>
         </section>
-        <section id="section-incentive" class="section section__incentive"></section>
         <section id="cookies" class="cookies">
             <p>
-                <h4 class="cookies__headline">This site uses cookies</h4>
+                <h4 class="cookies__headline">Ta strona używa cookies</h4>
                 <p class="cookies__content">
-                    If you agree to save the information contained in cookies, click on the "Accept" button in the bottom
-                    right corner of this information. If you do not agree, the cookie settings can be changed in your browser.
+                   Jeśli zgadzasz sie na przechowywanie informacji w pliku cookies kliknij akceptuje. Dziekuje :)
                 </p>
-                <button id="cookies__button" class="cookies__button">Accept</button>
+                <button id="cookies__button" class="cookies__button">Akceptuje</button>
             </p>
         </section>
         <footer id="section-footer"></footer>
@@ -238,6 +269,7 @@
     <script src="./script/scroll-spy.js"></script>
     <script src="./script/carousel.js"></script>
     <script src="./script/cookies.js"></script>
+    <script src="./script/prices-calc.js"></script>
     <script src="./script/animation.js"></script>
 </body>
 
