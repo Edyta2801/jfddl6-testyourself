@@ -2,16 +2,19 @@ class Card {
     constructor(id) {
         this.visible = false
         this.completed = false
-        this.image = '' //jakiś adres do pliku z obrazkiem
         this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
-
     }
 
-    toggleVisible() {
-        this.visible = !this.visible
+    makeVisible() {
+        this.visible = true
     }
-    toggleCompleted() {
-        this.completed = !this.completed
+
+    makeInvisible() {
+        this.visible = false
+    }
+
+    makeCompleted() {
+        this.completed = true
     }
 
     setId(id) {
@@ -28,22 +31,21 @@ class Game {
     constructor() {
         this.arrayOfCards = []
         //this.preDefinedArraySizes
-        this.boardDimension = 10// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
         this.moveCounter = 0
-        this.timer = null
-        this.cardId = 1 //card/cell id for the gameboard cells/cards
 
+        this.cardId = 1 //card/cell id for the gameboard cells/cards
+        this.resetButton = document.querySelector(".button__reset")
+        // this.isWon=false
+        this.gameLevel = 0
+
+        this.ranking = new Ranking()
         this.init()
     }
 
-
     init() {
         this.generateArrayOfCards()
-        console.log('generated', this.arrayOfCards)
-
         this.shuffleDecksInArray()
-        console.log('shuffled', this.arrayOfCards)
-
     }
 
     startGame() {
@@ -51,10 +53,14 @@ class Game {
     }
 
     render() {
-        document.body.innerHTML = ""
 
+        const board = document.querySelector(".section-incentive__game-board")
+        board.innerHTML = ''
+        this.resetButton.addEventListener('click', this.resetGame)
         const gameBoard = document.createElement('div')
         gameBoard.classList.add('gameboard')
+        const moveCounterDiv = document.querySelector(".game-score__counter")
+        moveCounterDiv.innerHTML = this.moveCounter
 
         this.arrayOfCards.forEach((card, i) => {
             const singleCard = document.createElement('div')
@@ -66,64 +72,68 @@ class Game {
             })
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
-                singleCard.style.backgroundImage = `url("${card.image}")`
+                singleCard.style.backgroundImage = `url("./images/gameCards/${card.id}.svg")`
             }
 
             if (card.visible === true) {
                 singleCard.classList.add('card--visible')
-
-                singleCard.style.backgroundImage = `url("${card.image}")`
+                singleCard.style.backgroundImage = `url("./images/gameCards/${card.id}.svg")`
             }
             gameBoard.appendChild(singleCard)
         })
 
 
-        document.body.appendChild(gameBoard)
+        board.appendChild(gameBoard)
 
         window.addEventListener('resize', () => gameBoard.style.height = gameBoard.offsetWidth + 'px')
         gameBoard.style.height = gameBoard.offsetWidth + 'px'
     }
-
-
-
 
     clickCard(i) {
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
         const numberOfVisibleCards = visibleCards.length
 
+        if (uncompletedCards.length != 0 && this.arrayOfCards[i].completed != true) {
+            this.moveCounter++
+        }
+
         if (numberOfVisibleCards === 0) {
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
         }
 
         if (numberOfVisibleCards === 1) {
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
             this.checkIfVisibleCardMatchedThenCompleteThem()
         }
 
         if (numberOfVisibleCards === 2) {
             this.hideAllVisibleCards()
-            this.toggleVisible(i)
+            this.makeCardVisible(i)
         }
 
         this.checkIfAllCompletedThenWin()
-        
+
     }
 
-    toggleVisible(i) {
-        this.arrayOfCards[i].toggleVisible()
+    makeCardVisible(i) {
+        this.arrayOfCards[i].makeVisible()
         this.render()
     }
 
     checkIfVisibleCardMatchedThenCompleteThem() {
-        console.log('aaa', this.arrayOfCards)
+
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
-        console.log('unc', uncompletedCards)
-        if (visibleCards[0].image === visibleCards[1].image) {
-            visibleCards[0].completed = true
-            visibleCards[1].completed = true
+
+        if (
+            visibleCards.length === 2 &&
+            visibleCards[0].id === visibleCards[1].id
+        ) {
+            visibleCards[0].makeCompleted()
+            visibleCards[1].makeCompleted()
         }
+
         this.render()
     }
 
@@ -141,21 +151,32 @@ class Game {
     }
 
     win() {
+        const promptBox = document.querySelector(".prompt-form-container")
+        const promptBoxInput = document.querySelector(".prompt-form__input-text")
+        const promptBoxButton = document.querySelector(".prompt-form__button")
+
+        promptBox.style.display = "initial"
+
+        promptBoxButton.addEventListener(
+            'click',
+            () => {
+                this.ranking.savePlayerName(promptBoxInput.value, this.gameLevel, this.moveCounter)
+            }
+        )
+
         console.log('YOU WON!')
     }
-    
+
     generateArrayOfCards() {
         let fullDim = (this.boardDimension * this.boardDimension) / 2
 
         for (let i = 0; i < fullDim; i++) {
-            this.arrayOfCards[i] = new Card()
-            this.arrayOfCards[i].image = `./images/gameCards/${i + 1}.svg`
+            this.arrayOfCards[i] = new Card(i + 1)
         }
+
         const tempArr = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
         this.arrayOfCards = this.arrayOfCards.concat(tempArr)
     }
-
-
 
     shuffleDecksInArray() {
         let inputArray = this.arrayOfCards.map(element => Object.assign(Object.create(Card.prototype), element));
@@ -173,12 +194,10 @@ class Game {
         this.boardDimension = level
     }
 
-    // resetGame() {
-    // robimy taką funkcję ?
-    // }
+    resetGame() {
+        window.location = ''
+    }
 }
 
 const game = new Game()
 game.render()
-
-
