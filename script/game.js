@@ -2,7 +2,7 @@ class Card {
     constructor(id) {
         this.visible = false
         this.completed = false
-        this.id = null || id //przypisanie id chyba dopiero w funkcji generate array w obiekcie Game
+        this.id = null || id
     }
 
     makeVisible() {
@@ -16,29 +16,16 @@ class Card {
     makeCompleted() {
         this.completed = true
     }
-
-    // setId(id) {
-    //     this.id = id
-    // }
-
-    // setImageUrl(url) {
-    //     this.image = url
-    // }
-
 }
 
 class Game {
     constructor() {
         this.arrayOfCards = []
-        //this.preDefinedArraySizes
-        this.boardDimension = 2// 2,4,6,8,10 max 2x2,4x4...
+        this.boardDimension = 2
         this.moveCounter = 0
-
-        this.cardId = 1 //card/cell id for the gameboard cells/cards
+        this.cardId = 1
         this.resetButton = document.querySelector(".button__reset")
-        // this.isWon=false
         this.gameLevel = 1
-
         this.ranking = new Ranking()
         this.init()
     }
@@ -49,30 +36,24 @@ class Game {
         this.shuffleDecksInArray()
     }
 
-    startGame() {
-
-    }
-
     render() {
-
         const board = document.querySelector(".section-incentive__game-board")
         board.innerHTML = ''
         this.resetButton.addEventListener('click', this.resetGame)
         const gameBoard = document.createElement('div')
         gameBoard.classList.add('gameboard')
         const moveCounterDiv = document.querySelector(".game-score__counter")
-        const levelDiv=document.querySelector(".game-score__level")
+        const levelDiv = document.querySelector(".game-score__level")
         moveCounterDiv.innerHTML = this.moveCounter
-        levelDiv.innerHTML=this.gameLevel
+        levelDiv.innerHTML = this.gameLevel
 
         this.arrayOfCards.forEach((card, i) => {
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
             singleCard.style.flexBasis = 100 / this.boardDimension + '%'
 
-            singleCard.addEventListener('click', () => {
-                this.clickCard(i)
-            })
+            singleCard.addEventListener('click', () => { this.clickCard(i) })
+
             if (card.completed === true) {
                 singleCard.classList.add('card--completed')
                 singleCard.style.backgroundImage = `url("./images/gameCards/${card.id}.svg")`
@@ -84,7 +65,6 @@ class Game {
             }
             gameBoard.appendChild(singleCard)
         })
-
 
         board.appendChild(gameBoard)
 
@@ -114,9 +94,7 @@ class Game {
             this.hideAllVisibleCards()
             this.makeCardVisible(i)
         }
-
         this.checkIfAllCompletedThenWin()
-
     }
 
     makeCardVisible(i) {
@@ -125,7 +103,6 @@ class Game {
     }
 
     checkIfVisibleCardMatchedThenCompleteThem() {
-
         const uncompletedCards = this.arrayOfCards.filter((card) => !card.completed)
         const visibleCards = uncompletedCards.filter((card) => card.visible)
 
@@ -136,7 +113,6 @@ class Game {
             visibleCards[0].makeCompleted()
             visibleCards[1].makeCompleted()
         }
-
         this.render()
     }
 
@@ -164,22 +140,17 @@ class Game {
             'click',
             () => {
                 this.ranking.savePlayerName(promptBoxInput.value, this.gameLevel, this.moveCounter)
-
                 promptBox.style.display = "none"
-                
-                console.log(this.gameLevel)
                 this.setGameLevel(this.gameLevel)
                 this.levelUp()
             }
         )
-
-        console.log('YOU WON!')
     }
 
     generateArrayOfCards() {
         let fullDim = (this.boardDimension * this.boardDimension) / 2
-
         this.arrayOfCards = []
+
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card(i + 1)
         }
@@ -199,22 +170,22 @@ class Game {
         }
         this.arrayOfCards = inputArray.map(element => Object.assign(Object.create(Card.prototype), element));
     }
-
-    setGameLevel(level) {//levels 2/4/6/8/10max
-        this.boardDimension = (level*2)
+    //levels ---5max because there is only 50 different card images
+    setGameLevel(level) {
+        this.boardDimension = (level * 2)
     }
 
     levelUp() {
-        this.moveCounter=0
+        this.moveCounter = 0
         this.generateArrayOfCards()
         this.shuffleDecksInArray()
         this.render()
     }
-    resetGame(){
-        window.location=''
+
+    resetGame() {
+        window.location = ''
     }
 
 }
-
 const game = new Game()
 game.render()

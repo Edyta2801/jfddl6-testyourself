@@ -23,6 +23,7 @@ body, html {
     height: auto;
     background-color: #a4b0be;
     padding-bottom: 20px;
+    padding-top: 15px;
 }
 
 .thank-you__text-container {
@@ -32,6 +33,7 @@ body, html {
     justify-content: center;
     margin: 0;
     font-size: 24px;
+    color: #1e272e;
 }
 
 .thank-you__back-button {
@@ -41,16 +43,13 @@ body, html {
 }
 
 .thank-you__button-link {
-    font-size: 24px;
-    color: #1e272e;
+    font-size: 16px;
     padding: 10px;
+    text-align: center;
+    height:18px;
+    width:55px;
     text-decoration: none;
-    border-radius: 4px;
-    -webkit-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
-    box-shadow: 9px 10px 26px 4px rgba(0, 0, 0, 0.75);
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     outline: none;
     font-weight: bold;
@@ -58,7 +57,7 @@ body, html {
     color: #1e272e;
     background-color: #e17055;
     border-radius: 4px;
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .thank-you__button-link:hover {

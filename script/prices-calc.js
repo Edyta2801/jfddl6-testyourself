@@ -2,15 +2,11 @@ class Price {
     constructor() {
         this.oneUserPrice = 5
         this.finalPrice = 0
-
         this.checkBoxCommercialValue = false
         this.checkBoxNonCommercialValue = true
-
         this.sliderValue = 5
 
         this.init()
-
-
     }
 
     init() {
