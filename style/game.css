@@ -1,5 +1,4 @@
 .gameboard {
-    /* width: 100vw; */
     max-width: 600px;
     display: flex;
     flex-wrap: wrap;
@@ -13,16 +12,16 @@
     content: url('');
     box-sizing: border-box;
     border: 1px solid black;
-    background-color: red;
+    background-color: #e55039;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.5);
 }
 
 .card--visible {
-    background-color: green;
+    background-color: #4cd137;
 }
 
 .card--completed {
-    background-color: orange;
+    background-color: #f39c12;
 }

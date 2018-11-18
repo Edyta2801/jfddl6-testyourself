@@ -48,6 +48,7 @@ class Game {
         levelDiv.innerHTML = this.gameLevel
 
         this.arrayOfCards.forEach((card, i) => {
+        
             const singleCard = document.createElement('div')
             singleCard.classList.add('card')
             singleCard.style.flexBasis = 100 / this.boardDimension + '%'
