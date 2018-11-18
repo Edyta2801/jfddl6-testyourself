@@ -28,7 +28,7 @@
 
 <body>
     <main class="main">
-        <nav id="section-nav-top" class="section-nav-top">
+        <nav class="section-nav-top">
             <div class="section-nav-top__logo">
                 <a class="section-nav-top__logo-link" href="#">
                     <img class="section-nav-top__logo-img" src="./images/logo.svg"></a>
@@ -49,6 +49,8 @@
                     <a id="section-nav-top__product-id" class="section-nav-top__link" href="#section-info-products__marker">Produkt</a></li>
                 <li class="section-nav-top__item">
                     <a id="section-nav-top__team-id" class="section-nav-top__link" href="#section-info-team__marker">Zespół</a></li>
+                <li class="section-nav-top__item">
+                    <a id="section-nav-top__prices-id" class="section-nav-top__link" href="#section-prices__marker">Ceny</a></li>
                 <li class="section-nav-top__item">
                     <a id="section-nav-top__premiere-reg-id" class="section-nav-top__link" href="#section-registration-premiere__marker">Premiera</a></li>
             </ul>
@@ -204,6 +206,7 @@
         </section>
 
         <section id="section-prices" class="section-prices-calc">
+            <div id="section-prices__marker"></div>
             <div class="section-prices-calc__row section-prices-calc__header">
                 <h2>Sprawdź nasze ceny</h2>
             </div>
@@ -257,7 +260,7 @@
             <p>
                 <h4 class="cookies__headline">Ta strona używa cookies</h4>
                 <p class="cookies__content">
-                   Jeśli zgadzasz sie na przechowywanie informacji w pliku cookies kliknij akceptuje. Dziekuje :)
+                    Jeśli zgadzasz sie na przechowywanie informacji w pliku cookies kliknij akceptuje. Dziekuje :)
                 </p>
                 <button id="cookies__button" class="cookies__button">Akceptuje</button>
             </p>

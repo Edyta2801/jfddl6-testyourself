@@ -1,7 +1,7 @@
 (function () {
     'use strict'
-    const linkNames = ['home-id', 'function-id', 'product-id', 'team-id', 'premiere-reg-id'];
-    const sectionNames = ['hero', 'function', 'info-products', 'info-team', 'registration-premiere'];
+    const linkNames = ['home-id', 'function-id', 'product-id', 'team-id', 'prices-id', 'premiere-reg-id'];
+    const sectionNames = ['hero', 'function', 'info-products', 'info-team', 'prices', 'registration-premiere'];
 
     const navLinks = linkNames.map((element) => {
         return document.querySelector(`#section-nav-top__${element}`);
@@ -35,13 +35,18 @@
             navItems.forEach((element) => {
                 element.setInActive();
             })
+            navItems[5].setActive();
+        } else if (window.scrollY + 1 * navbarHeight > navItems[3].sectionEl.offsetTop) {
+            navItems.forEach((element) => {
+                element.setInActive();
+            })
             navItems[4].setActive();
-        } else if (window.scrollY + 8 * navbarHeight > navItems[3].sectionEl.offsetTop) {
+        } else if (window.scrollY + 6 * navbarHeight > navItems[3].sectionEl.offsetTop) {
             navItems.forEach((element) => {
                 element.setInActive();
             })
             navItems[3].setActive();
-        } else if (window.scrollY + 2.5 * navbarHeight > navItems[2].sectionEl.offsetTop) {
+        } else if (window.scrollY + 3 * navbarHeight > navItems[2].sectionEl.offsetTop) {
             navItems.forEach((element) => {
                 element.setInActive();
             })

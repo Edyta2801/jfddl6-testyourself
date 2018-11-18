@@ -87,9 +87,6 @@
   .section-nav-top__flex-wrapper {
     flex-direction: column;
   }
-  /* .section__hero {
-    margin-top: 310px;
-  } */
   .section-nav-top {
     flex-direction: column;
     z-index: 2;
@@ -136,12 +133,18 @@
     position: absolute;
     width: 1px;
     height: 1px;
-    top: 3155px;
+    top: 3288px;
+  }
+  #section-prices__marker {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 3448px;
   }
   #section-registration-premiere__marker {
     position: absolute;
     width: 1px;
     height: 1px;
-    top: 3538px;
+    top: 3542px;
   }
 }
