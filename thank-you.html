@@ -8,6 +8,8 @@
     <title>Thank You</title>
 
     <link rel="stylesheet" href="./style/thank-you.css" type="text/css">
+    <link rel="stylesheet" href="./style/ranking.css">
+    <link rel="stylesheet" href="./style/game.css">
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -34,7 +36,32 @@
 
     </div>
 
+    <div class="section-incentive">
+        <div class="section-incentive__game-container">
+
+            <div class="section-incentive__game-board">
+            </div>
+            <div class="section-incentive__button-and-timer-container">
+                <button class="button start__button-start-game">Zacznij grę</button>
+                <button class="button button__reset">Resetuj</button>
+                <h3 class="game-score">Level <div class="game-score__level">1 <br> </div> Ilość ruchów: <div class="game-score__counter">0</div>
+                </h3>
+            </div>
+
+            <div class="prompt-form-container">
+                <label>Twoje imię:</label>
+                <input class="prompt-form__input-text" name="text" type="text">
+                <button class="prompt-form__button">Zapisz</button>
+            </div>
+
+        </div>
+        <div class="section-incentive__ranking">
+            <h3 class="section-incentive__header">Ranking najlepszych graczy</h3>
+        </div>
     </div>
+
+    <script src="./script/ranking.js"></script>
+    <script src="./script/game.js"></script>
 </body>
 
 </html>
