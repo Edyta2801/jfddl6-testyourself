@@ -161,6 +161,10 @@ class Game {
             'click',
             () => {
                 this.ranking.savePlayerName(promptBoxInput.value, this.gameLevel, this.moveCounter)
+
+                promptBox.style.display = "none"
+                this.setGameLevel(4)
+                this.resetGame()
             }
         )
 
@@ -170,6 +174,7 @@ class Game {
     generateArrayOfCards() {
         let fullDim = (this.boardDimension * this.boardDimension) / 2
 
+        this.arrayOfCards = []
         for (let i = 0; i < fullDim; i++) {
             this.arrayOfCards[i] = new Card(i + 1)
         }
@@ -195,7 +200,10 @@ class Game {
     }
 
     resetGame() {
-        window.location = ''
+
+        this.generateArrayOfCards()
+        this.shuffleDecksInArray()
+        this.render()
     }
 }
 
