@@ -17,13 +17,13 @@ class Card {
         this.completed = true
     }
 
-    setId(id) {
-        this.id = id
-    }
+    // setId(id) {
+    //     this.id = id
+    // }
 
-    setImageUrl(url) {
-        this.image = url
-    }
+    // setImageUrl(url) {
+    //     this.image = url
+    // }
 
 }
 
@@ -37,13 +37,14 @@ class Game {
         this.cardId = 1 //card/cell id for the gameboard cells/cards
         this.resetButton = document.querySelector(".button__reset")
         // this.isWon=false
-        this.gameLevel = 0
+        this.gameLevel = 1
 
         this.ranking = new Ranking()
         this.init()
     }
 
     init() {
+        console.log(this.gameLevel)
         this.generateArrayOfCards()
         this.shuffleDecksInArray()
     }
@@ -60,7 +61,9 @@ class Game {
         const gameBoard = document.createElement('div')
         gameBoard.classList.add('gameboard')
         const moveCounterDiv = document.querySelector(".game-score__counter")
+        const levelDiv=document.querySelector(".game-score__level")
         moveCounterDiv.innerHTML = this.moveCounter
+        levelDiv.innerHTML=this.gameLevel
 
         this.arrayOfCards.forEach((card, i) => {
             const singleCard = document.createElement('div')
@@ -156,15 +159,17 @@ class Game {
         const promptBoxButton = document.querySelector(".prompt-form__button")
 
         promptBox.style.display = "initial"
-
+        this.gameLevel++
         promptBoxButton.addEventListener(
             'click',
             () => {
                 this.ranking.savePlayerName(promptBoxInput.value, this.gameLevel, this.moveCounter)
 
                 promptBox.style.display = "none"
-                this.setGameLevel(4)
-                this.resetGame()
+                
+                console.log(this.gameLevel)
+                this.setGameLevel(this.gameLevel)
+                this.levelUp()
             }
         )
 
@@ -196,15 +201,19 @@ class Game {
     }
 
     setGameLevel(level) {//levels 2/4/6/8/10max
-        this.boardDimension = level
+        this.boardDimension = (level*2)
     }
 
-    resetGame() {
-
+    levelUp() {
+        this.moveCounter=0
         this.generateArrayOfCards()
         this.shuffleDecksInArray()
         this.render()
     }
+    resetGame(){
+        window.location=''
+    }
+
 }
 
 const game = new Game()
