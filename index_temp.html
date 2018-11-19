@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game development</title>
+    <link rel="stylesheet" href="./style/ranking.css">
+
+    <link rel="stylesheet" href="./style/game.css">
+</head>
+
+<body>
+    <div class="section-incentive">
+        <div class="section-incentive__game-container">
+
+            <div class="section-incentive__game-board">
+            </div>
+            <div class="section-incentive__button-and-timer-container">
+                <button class="button start__button-start-game">Zacznij grę</button>
+                <button class="button button__reset">Resetuj</button>
+                <h3 class="game-score">Level <div class="game-score__level">1 <br> </div> Ilość ruchów: <div class="game-score__counter">0</div>
+                </h3>
+            </div>
+
+            <div class="prompt-form-container">
+                    <label >Twoje imię:</label>
+                    <input class="prompt-form__input-text" name="text" type="text">
+                    <button class="prompt-form__button">Zapisz</button>
+            </div>
+
+        </div>
+        <div class="section-incentive__ranking">
+            <h3 class="section-incentive__header">Ranking najlepszych graczy</h3>
+        </div>
+    </div>
+
+
+
+
+    <script src="./script/ranking.js"></script>
+    <script src="./script/game.js"></script>
+</body>
+
+</html>
