@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thank You</title>
 
     <link rel="stylesheet" href="./style/thank-you.css" type="text/css">
     <link rel="stylesheet" href="./style/ranking.css">
     <link rel="stylesheet" href="./style/game.css">
+    <link rel="stylesheet" href="./style/description.css">
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -24,17 +26,30 @@
     <div class="thank-you__container">
 
         <div class="thank-you__text-container">
-            <h2 class="thank-you__text-header-one">Dziękujemy</h2>
+            <h1 class="thank-you__text-header-one">Dziękujemy</h1>
         </div>
         <div class="thank-you__text-container">
-            <h3 class="thank-you__text-header-two">za</h3>
+            <h2 class="thank-you__text-header-two">za</h2>
         </div>
         <div class="thank-you__text-container">
-            <h3 class="thank-you__text-header-two">zaufanie</h3>
+            <h2 class="thank-you__text-header-two">zaufanie!</h2>
         </div>
         <div class="thank-you__back-button"><a href="http://www.testyourself.jfddl6.is-academy.pl/" class="thank-you__button-link">Wróć</a></div>
 
     </div>
+    <section id="section-description" class="section-description">
+        <div class="section-description__text">
+            <strong>Opis gry</strong>
+            Jak wygrać i od czego zależy wynik?<br>
+            Po kliknięciu w drugie pole odkrywa się druga karta.<br>
+            Jeśli karty pasują do siebie, to super!<br>
+            Obie pola znikają z planszy.<br>
+            Gracz wygrywa kiedy uda mu się połączyć wszystkie karty.<br>
+            Im mniej ruchów tym oczywiście lepiej.
+        </div>
+        <div class="section-description__img">
+        </div>
+    </section>
 
     <div class="section-incentive">
         <div class="section-incentive__game-container">
@@ -42,10 +57,10 @@
             <div class="section-incentive__game-board">
             </div>
             <div class="section-incentive__button-and-timer-container">
-                <h3 class="game-score">Poziom <div class="game-score__level">1  </div> <br/>Ilość ruchów: <div class="game-score__counter">0</div>
-                </h3>
+                <button class="button start__button-start-game">Zacznij grę</button>
                 <button class="button button__reset">Resetuj</button>
-                
+                <h3 class="game-score">Level <div class="game-score__level">1  </div> <br/>Ilość ruchów: <div class="game-score__counter">0</div>
+                </h3>
             </div>
 
             <div class="prompt-form-container">
