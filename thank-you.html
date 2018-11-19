@@ -8,6 +8,10 @@
     <title>Thank You</title>
 
     <link rel="stylesheet" href="./style/thank-you.css" type="text/css">
+    <link rel="stylesheet" href="./style/ranking.css">
+    <link rel="stylesheet" href="./style/game.css">
+    <link rel="stylesheet" href="./style/description.css">
+
 
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -19,22 +23,55 @@
 </head>
 
 <body>
+    <div class="section-incentive">
+        <div class="section-incentive__game-container">
+
+            <div class="section-incentive__game-board">
+            </div>
+            <div class="section-incentive__button-and-timer-container">
+                <h3 class="game-score">Level <div class="game-score__level">1 </div> <br />Ilość ruchów: <div class="game-score__counter">0</div>
+                </h3>
+                <button class="button button__reset">Resetuj</button>
+            </div>
+
+            <div class="prompt-form-container">
+                <label>Twoje imię:</label>
+                <input class="prompt-form__input-text" name="text" type="text">
+                <button class="prompt-form__button">Zapisz</button>
+            </div>
+
+        </div>
+        <div class="section-incentive__ranking">
+            <h3 class="section-incentive__header">Ranking najlepszych graczy</h3>
+        </div>
+    </div>
+
+    <section id="section-description" class="section-description">
+        <div class="section-description__text">
+            <h2>Opis gry</h2>
+
+            Jak wygrać i od czego zależy wynik?<br>
+            Po kliknięciu w drugie pole odkrywa się druga karta.<br>
+            Jeśli karty pasują do siebie, to super!<br>
+            Obie pola znikają z planszy.<br>
+            Gracz wygrywa kiedy uda mu się połączyć wszystkie karty.<br>
+            Im mniej ruchów tym oczywiście lepiej.
+        </div>
+    </section>
     <div class="thank-you__container">
 
         <div class="thank-you__text-container">
-            <h1 class="thank-you__text-header-one">Dziękujemy</h1>
-        </div>
-        <div class="thank-you__text-container">
-            <h2 class="thank-you__text-header-two">za</h2>
-        </div>
-        <div class="thank-you__text-container">
-            <h2 class="thank-you__text-header-two">zaufanie!</h2>
+            <h2 class="thank-you__text-header-one">Dziękujemy za zaufanie</h2>
         </div>
         <div class="thank-you__back-button"><a href="http://www.testyourself.jfddl6.is-academy.pl/" class="thank-you__button-link">Wróć</a></div>
 
     </div>
 
-    </div>
+
+
+
+    <script src="./script/ranking.js"></script>
+    <script src="./script/game.js"></script>
 </body>
 
 </html>

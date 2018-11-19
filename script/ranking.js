@@ -62,7 +62,7 @@ class Ranking {
 
     savePlayerName(name, level, score) {
         this.playersArray = this.playersArray.concat(
-            new Player(name, level, score)
+            new Player(name, (level - 1), score)
         )
         window.localStorage.setItem("ranking", JSON.stringify(this.playersArray))
         this.render()
