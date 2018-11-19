@@ -36,7 +36,7 @@
                 element.setInActive();
             })
             navItems[5].setActive();
-        } else if (window.scrollY + 1 * navbarHeight > navItems[3].sectionEl.offsetTop) {
+        } else if (window.scrollY + 4 * navbarHeight > navItems[3].sectionEl.offsetTop) {
             navItems.forEach((element) => {
                 element.setInActive();
             })
