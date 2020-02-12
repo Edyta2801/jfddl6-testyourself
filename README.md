@@ -8,5 +8,4 @@ It engages topics such as :
 The main task was to design quiz web site, were you could choose the topic you are good at and have some 
 fun in checking your knowledge. 
 
-
-http://www.testyourself.jfddl6.is-academy.pl/
+## See [DEMO](http://www.testyourself.jfddl6.is-academy.pl)
